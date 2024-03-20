@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="news-plates">
+        <h1>Новости</h1>
+
+        {% for post in post_list %}
+        <div class="new-frame">
+            <div class="frame-header-block">
+                <span class="frame-header">{{post.title}}</span>
+                <p>{{post.date}}</p>
+                {% comment %} <p style="font-weight: 300; font-size: 15px;"><i>Posted by: </i><b>{{post.author}}</b></p> {% endcomment %}
+            </div>
+            <hr>
+            <span class="frame-content">{{post.content}} <a href="{% url 'new_detail' pid=post.pk %}">Читать далее...</a></span>
+            {% comment %} <a href="{% url 'post_delete' pid=post.pk %}" style="color: gray; text-decoration: none; font-size: 50px; margin-right: 20px;">×</a> {% endcomment %}
+            
+            {% comment %} {% for att in post.att|slice:":1" %}
+            <div class="pic">
+                <img src="/media/{{att.file}}" alt="" width="100%" style="border-radius: 15px;">
+            </div>
+            {% endfor %} {% endcomment %}
+            
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

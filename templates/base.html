@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a href="">Главная</a>
+            <a href="{% url 'news' %}">Новости</a>
+            <div class="dropmenu">
+                <a href="" class="dropbtn">Пациентам <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
+                <div class="dropcontent">
+                    <a href="#">Медицинские услуги</a>
+                    <a href="rulesPage.html">Правила санатория</a>
+                </div>
+            </div>
+            <div class="dropmenu">
+                <a href="" class="dropbtn">Информация <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
+                <div class="dropcontent">
+                    <a href="#">Наблюдательный совет</a>
+                    <a href="#">История</a>
+                    <a href="#">Руководитель</a>
+                    <a href="#">Вакансии</a>
+                    <a href="#">Отзывы</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">Лицензии и правовые акты</a>
+                    <a href="#">Сведения о работниках</a>
+                    <a href="#">Протокол итогов</a>
+                </div>
+            </div>
+            <a href="">О НИИ</a>
+            
+        </div>
+        <div class="logo">
+            <img src="assets/logo2.png" alt="">
+        </div>
+        <div class="sign_in">
+            <a href="" class="btn">Войти</a>
+        </div>
+    </header>
+    <div class="content">
+        {% block content %}
+        {% endblock %}    
+    </div>
+    <footer>
+        <div class="footer_info">
+            
+            <!-- <div class="phone-cols">
+                <div class="phone-col-1 col-first">
+                    <span><b>Регистратура:</b> </span>
+                    <span>Корпус №1: +7(71636) 7-11-44</span>
+                    <span>Корпус №3: +7(71636) 72-5-28</span>
+                    <span class="mg-b">Корпус №5 для детей и подростков: +7(71636) 7-17-28</span>
+                    <span><b>E-mail:</b> sanborovoe@mail.kz</span>
+                </div>
+                <div class="phone-col-1">
+                    <span class="mg-b"><b>Приемная:</b> +7(71636) 7-11-46</span>
+                    <span><b>Бухгалтерия:</b></span>
+                    <span>Главный бухгалтер: +7(71636) 71-6-65</span>
+                    <span class="mg-b">Бухгалтерия общий: +7(71636) 7-16-70</span>
+                    
+                </div>
+            </div> -->
+            <div class="links-cols">
+                <div class="contacts col-first">
+                    <span class="mg-b">Казахстан, Акмолинская область, Бурабайский район, Боровская п.а., п.Бурабай, ул.Кенесары 1</span>
+                </div>
+                <div class="soc-links col-second">
+                    <div class="links">
+                        <a href="">Instagram<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADuElEQVR4nO1ZO08UURS+hQ8MgmgJrQrEQnx1PmInMRH9BYaI/gEVtFZojcZSgn9AMLGSRUU7tJeHjS62ggIz58wm+pnDnhsnhNm5MzvDrMl+ySSbnfs439zzvMeYJpooHszoZsYIM2aIME+EDWYgi0fWIsI8M0rMGGbG0cwJVCo4zYw3WQmd4JmpVHCqbgIAdjPjKRH+6Ff7wYxnzLgipwOgNZMvVd2rVU98gBnjuhd07ycAdqVd+CAz3upiHhEeAGjPSnCH/duJ8JAIvj0dAB1pTsKq0ndRLVMQggDHmfFVZXkPYI/zZFEnnVj2PHSaguF56GTGsmrHY6dJ8vVFL0WdggAnTIMgCHBS1IwIv+V37ASrUmITpsFAhFHVlFLNgeo1Nr3TThp2aP/LYpOqRv1b3wM4QIQVJXOk1kIjOmg8b6Ej9l8OxZByxJgJfX+31kIlHTSQp8B1Ermm76cjFyLCog5KnR5I/CHCIBFeEmFBU48N/T0l72RMhJD9SqZMhEsx6r9Qi8iaDALQloLAPmbcJ8JPh7xqlRn3ALSk2KdN11iLHGQ3SuPnifApJOxrIgzZNEbTjx79bzpE6GOaOMVxcqYhosGqbI/b93E2bo7v41xIjRMHXc6aiKhT6CTeJcmFNJeb1Q8wl0TNOGsiYhMqyHzihO6fY7AnM1IIERVi07Bd1CkKvo8L1gEgwpvlSkTcqDXsBHLXjF++j+tFEJnSL3kjgcxRa93UtV4UQcTqdncCmaP27YkNcjkSWdfgud/UCVlDiaz/70Talcgvl/FN1Yox9iFTJ4hwq0hjH4xNpx0hNySFuV9UA+KqCnDepAQRLoYCYkfRKcqia1Te5mMsxVZ8O5A0tkgqrvNmk5ABcIgZHxoiadwmjV+S3Mm4qdOXhknjtxRWc6HCqqSeqFfijAa8Xv1v07DtSeRSWFF9pW6LpOLWATiUusMA9uZS6lI2lw8d4kaJMKk9lHV95PekvEtTuyS6fCj6OsgFoeug6PJBO0WFXdC5gBnPVcbbDXtlGgfnK1OB9SrSZDENBiKMOVel0rPTtoLvdH2/Q6hU2x2kbYU+p0nSs1Pmy56HLlMwPA9doUbPI+eJ0ngMBS5pvZ0xBSEI0MeMbzbQJm6Kiq8P2Yt0ikbF2HKTeHvDHhN1suVC6vgj7KVnJ3qphFa0P3FVLgyyKHNDe0ka06NxYsJ6J9lb1Cl1ezqMIMAxIryKSz1yeEq5OBzx3VI3yDHb9CMroTWN+SyulRl3iHA4cwJNNGES4y9/04NtW90eaAAAAABJRU5ErkJggg=="></a>
+                        <a href="">Facebook<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB7UlEQVR4nO2avYoUQRSFy0TUyHB3xWDfwUQwNNNATAxMzcRsd30AV0T0DfQ1RAxG8R2MDAxEozVx7e5zZgM/KagBGeanpqe1u6EOdNLUvfecuaemevpOCAUFBa1gc9tmIlHZ0Ocl8Stysbm1kQiJ477Je7moJ5t0IgbY5qCq2A09o6rYtTlMnMjqjM37tPggDAw2R4nbZO3i5Eeqip0wMFQVO8ktp2sXz7wYBgrn8itC/hNcOtIxJPYlXkp8ioetRG3z1eajxPOm4QZwbtAdkXgg0WQcep8HK2Q65Z7E73jZvD474xpwCTgfv1Ylbkq8WFe/VyHAZZsf6dN+tE199ylE4mHK+2Hb+u5ZyJuYs2m4//f9aC2JZzZf5vdOGKIQm2/JVvtz918t2/BhoB1RzAlcmKv1PXXqOnAxJ1ffHVmYs00tFyEtkeP7VYdi03B1Vd5sAj0LOdmaX9dCNoy5m+LejlqIxNN1LxhGIcTmXYq7s3XeIeyRZslGH5uQk074lQNxBcrJvgDFWl2gWGsBirW6QLHWAhRrjdZaEqdxYZcjt66E1DVX0mP+z5yik1TgsAXnfyrE5nH26C0OGpPqOHg8qmv2WnDvVEhdsxdFSExTTN6YOv5CW/ViYBTj6bnOTGbD0VH+YaCgoCDM8Acg8OTt6zSlOAAAAABJRU5ErkJggg=="></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    <script src="carusel-script.js"></script>
+</body>
+</html>
