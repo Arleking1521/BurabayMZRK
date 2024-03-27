@@ -26,8 +26,25 @@ account_activation_token = TokenGenerator()
 User = get_user_model()
 def registration(request):
     if request.method == 'POST': 
+        delete_inactive_accounts()
         form = RegistrationForm(request.POST) 
         if form.is_valid(): 
+            email = form.cleaned_data.get('email')
+            # Проверяем, существует ли пользователь с такой почтой
+            try:
+                existing_user = User.objects.get(email=email)
+                # Проверяем, активен ли пользователь
+                if not existing_user.is_active:
+                    # Удаляем неактивного пользователя
+                    existing_user.delete()
+                else:
+                    # Показываем сообщение об ошибке
+                    return render(request, 'registration/error_message.html', {
+                        'error': 'Аккаунт с такой почтой уже существует и активен.'
+                    })
+            except User.DoesNotExist:
+                # Нет пользователя с такой почтой, продолжаем регистрацию
+                pass
             user = form.save(commit=False) 
             user.is_active = False 
             user.save() 
@@ -45,7 +62,6 @@ def registration(request):
                         mail_subject, message, to=[to_email] 
             ) 
             email.send() 
-            delete_inactive_accounts()
             return render(request,'registration/registr_email_messege.html', {'email' : to_email}) 
     else: 
         form = RegistrationForm() 
@@ -63,8 +79,10 @@ def activate(request, uidb64, token):
         if time_elapsed.total_seconds() <= 900:  # 900 секунд = 15 минут
             user.is_active = True 
             user.save() 
+            print(user)
             return render(request, 'registration/registr_email_active.html') 
         else: 
+            delete_inactive_accounts()
             return render(request,'registration/registr_email_activate_fail.html')
 
 def user_login(request):

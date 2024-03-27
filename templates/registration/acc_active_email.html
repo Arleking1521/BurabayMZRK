@@ -2,6 +2,5 @@
 Здравствуйте, {{ user.name }} {{user.surename}}, 
 Пожалуйств перейдите по ссылке для подтверждения регистрации, 
 <a href="http://{{ domain }}{% url 'activate' uidb64=uid token=token %}" class="btn"></a>
-
 Если вы не проходили регистрацию, можете проигнорировать данное сообщение!
 {% endautoescape %} 

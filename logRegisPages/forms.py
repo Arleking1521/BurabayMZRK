@@ -36,7 +36,6 @@ class RegistrationForm(UserCreationForm):
         return password2
     def clean_name(self):
         return self.cleaned_data['name']
-
     def clean_surename(self):
         return self.cleaned_data['surename']
     
