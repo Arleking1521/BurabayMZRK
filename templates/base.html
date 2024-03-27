@@ -6,46 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{%static 'style.css'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body>
     <header>
+        <div class="site-map-button ">
+            <a href="{% url 'site_map' %}" class="btn map-button">Карта сайта
+                <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7UlEQVR4nO2UQUoDQRREB4RkpccQJS7VlRdILqAn8BQJ5AouFdGTiCfQEMFLJBAXCanqXvhkIItxtMdG4kamoFf/9a9P07+KolVNMXJS5AjYk7iUeJZ4lRjbHCbY3Q37ZENj4xg5tbmVWJVw/UhMbYY2+zFybHMjsawyyeYSk++a2gxs7iUWiTpZBj9dAHbWa84krmxmWzeoCuj8qUGp1oD2ib6o/UX+7aIpkaZbWzR/NnuxGdkcJJh5loHEu81DCJzb9G3uUmm6YR9D4ALoNhpIvNlch0CvXq+naYU9KnJUTlumZA4LdBqn/Tf6AF+7tUzIVJTnAAAAAElFTkSuQmCC"></span>
+            </a>
+        </div>
         <div class="menu">
-            <a href="">Главная</a>
+            <a href="{% url 'index' %}">Главная</a>
             <a href="{% url 'news' %}">Новости</a>
             <div class="dropmenu">
-                <a href="" class="dropbtn">Пациентам <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
+                <a href="{% url 'med-services'%}" class="dropbtn">Пациентам <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
                 <div class="dropcontent">
-                    <a href="#">Медицинские услуги</a>
-                    <a href="rulesPage.html">Правила санатория</a>
+                    <a href="{% url 'med-services'%}">Медицинские услуги</a>
+                    <a href="{% url 'rules'%}">Правила санатория</a>
                 </div>
             </div>
             <div class="dropmenu">
-                <a href="" class="dropbtn">Информация <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
+                <a href="{% url 'viewSovet'%}" class="dropbtn">Информация <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII="></span></a>
                 <div class="dropcontent">
-                    <a href="#">Наблюдательный совет</a>
-                    <a href="#">История</a>
-                    <a href="#">Руководитель</a>
-                    <a href="#">Вакансии</a>
-                    <a href="#">Отзывы</a>
-                    <a href="#">Контакты</a>
-                    <a href="#">Лицензии и правовые акты</a>
-                    <a href="#">Сведения о работниках</a>
-                    <a href="#">Протокол итогов</a>
+                    <a href="{% url 'viewSovet'%}">Наблюдательный совет</a>
+                    <a href="{% url 'histories'%}">История</a>
+                    <a href="{% url 'ceo-info' %}">Руководитель</a>
+                    <a href="{% url 'vacancies'%}">Вакансии</a>
+                    <a href="{% url 'orgStruct'%}">Организационная структура</a>
+                    <a href="{% url 'reviews'%}">Отзывы</a>
+                    <a href="{% url 'contacts'%}">Контакты</a>
+                    <a href="{% url 'rights-acts'%}">Правовые акты</a>
+                    <a href="{% url 'workers-info'%}">Сведения о работниках</a>
+                    <a href="{% url 'antiCor'%}">Противодействие коррупции</a>
+                    <a href="{% url 'ads'%}">Протокол итогов</a>
                 </div>
             </div>
-            <a href="">О НИИ</a>
+            <a href="{% url 'about'%}">О НИИ</a>
             
         </div>
         <div class="logo">
-            <img src="assets/logo2.png" alt="">
+            <a href="{% url 'index' %}"><img src="../../../static/assets/logo2.png" alt=""></a>
         </div>
         <div class="sign_in">
-            <a href="" class="btn">Войти</a>
+            {%if user.is_authenticated %}
+            <p>{{user.name}} {{user.surename}}</p>
+            <a href="{% url 'logout' %}" class="btn2">Выйти</a>
+            {% else %}
+            <a href="{% url 'login'%}" class="btn">Войти</a>
+            <a href="{% url 'registr'%}" class="btn2 registration-btn-header">Регистрация</a>
+            {% endif %}
         </div>
     </header>
     <div class="content">
-        {% block content %}
-        {% endblock %}    
+        
+            {% block content %}
+            {% endblock %}   
     </div>
     <footer>
         <div class="footer_info">
@@ -68,7 +84,13 @@
             </div> -->
             <div class="links-cols">
                 <div class="contacts col-first">
-                    <span class="mg-b">Казахстан, Акмолинская область, Бурабайский район, Боровская п.а., п.Бурабай, ул.Кенесары 1</span>
+                    <span class="mg-b footer-img">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACfElEQVR4nO2ZS2sUURBGK75BdKMYHyiIKx9LEZciulOyEQUFEaL+BMFfIO7UlfoPXATfBiULDQQhLjSCLxQUwZUxIZnp/qpH4cjFEQbJkLkdpnODOVC7GehDVd9bVW22yCLzhzt9EqMS0xIvsoz9tpAAlrtz3R1aQ2Iyy9hiCwFgjcSjfyVaZB5a6mQZmyXetJP4G3nOaUuVWo1eiQ+zSTSzMlGvs8lSA1jhzkgnEi0ydy013LkYI9FSYqcsJdz5UkbEnfF6nY2WChL1kiKhxAYsFdz5WFYkRFFwwlJAYmAuIhLvLQUkzs9RJLcUqNXYIPFrDjLPLRXcGSorktRN705fybJ6BSyxVAB6JMZKiBy21CgKjkdK3LMUAXrcGY4Q6bdUKQp2SzQ6FJmQ2GGpInE5IisvgdWWIsDK8IAR78tQ+I+liDu7JLKIzNwGllmKSJyLPI5vhgPDUsRn2KbMkpkrlvBq6GmkzNUkM1Or0evOpxJlttRSI8/Z5s7XyMzcAVZZahQFeyR+RGbm8Uz3TMiWxJmwipX4KfEutEiVyTQa7Au74MjMjLV2ABIH291TEvfDorASGYlDEh4pE9qZfokHHfx+vCg4WeWmPkomNiTuVLLRlDgQW2YlZCbDTqHrMo0Ge9353k0Z/xODec7Wrrf+7nzrtozEZDhsuiojsb3EpVlGZtSqWCvFTJglRaaswk8UN7ooM2JVInE2Zp7xzuOIVY07OyMnTWaJazbPY/OlThca3j4Gk5hAm0f0s5Iv+GtgrSW2NzsWU24Sb8M8ZCnSFDrqzpPQwnt7keHpadbbQmBqinXNrvhW+GDU/Az42Z0LYcye7+db5L/lNzpeLj7O24ZjAAAAAElFTkSuQmCC">
+                        Телефон доверия: +7(71636) 7-17-28</span>
+                    <span class="mg-b footer-img">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABNElEQVR4nO2UrU4EUQyFy08IhIBAkcDLEDQKHA5wOAyvgACHXQUOh0NhF4kAxwPgd/aU30OadEgXZtm5O7tmuU2amdzbOV/TaSuSLdvEWqfDVYD3quQ4HOBDUXCtBwpw054kV1TZHgO4bdqRVYJfVLnj8EVV3owQektyybRVuQUQ32AvxTvAPYfPAbwaQXmvSc6bZrfLXYBvdt4D9sBPVR45fEaVrQbgC5KzXtFDgB/l3S9wSODE4VMAT4eAnpOcdu3jn/d9wXU+/qO8MemzqhgZADaRy37lqoit/ZtkEDg0yEJokNeKmKTGlDrgMBLLcSQC1EZxO2UUJQFsgLuwBDZU+WRu7+XysZg6WpICdvhjUXC96bqVVLD7M8B9S8Ac4IGdpWjIkODGLhms/6bU2bJNlH0BCqspeWwqQnsAAAAASUVORK5CYII=">
+                        E-mail: sanborovoe@mail.kz</span>
+                    <span><u>Казахстан, Акмолинская область, Бурабайский район, Боровская п.а., п.Бурабай, ул.Кенесары 1</u></span>
                 </div>
                 <div class="soc-links col-second">
                     <div class="links">
@@ -80,6 +102,6 @@
             
         </div>
     </footer>
-    <script src="carusel-script.js"></script>
+    <script src="../static/script.js"></script>
 </body>
 </html>

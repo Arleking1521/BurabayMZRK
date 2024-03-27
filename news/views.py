@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Post, PostAttachment
 from .forms import PostForm
-
 # Create your views here.
 
 def post_list(request):
@@ -31,7 +30,7 @@ def post_new(request):
                     file = image,
                     post_id = post.pk
                 )
-            return redirect('post_detail', pid=post.pk)
+            return redirect('new_detail', pid=post.pk)
     return render(request, 'posts/post_new.html', {'form':form})
 
 def post_edit(request, pid):
@@ -56,5 +55,5 @@ def post_edit(request, pid):
                 PostAttachment.objects.get(pk=int(image_id)).delete()
             post.edited = True
             post.save()
-            return redirect('post_detail', pid = post.pk)
+            return redirect('new_detail', pid = post.pk)
     return render(request, 'posts/post_edit.html', {'form':form, 'post_att':post_att})

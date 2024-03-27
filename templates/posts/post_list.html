@@ -2,26 +2,28 @@
 
 {% block content %}
     <div class="news-plates">
-        <h1>Новости</h1>
-
+        <div class="new-review">
+            <h1>Новости</h1>
+                {% if  user.is_authenticated and user.is_staff %}
+                <a href = "{% url 'new_new' %}" class="btn"> Добавить объявление</a>
+                {% endif %}
+        </div>
         {% for post in post_list %}
         <div class="new-frame">
             <div class="frame-header-block">
-                <span class="frame-header">{{post.title}}</span>
-                <p>{{post.date}}</p>
-                {% comment %} <p style="font-weight: 300; font-size: 15px;"><i>Posted by: </i><b>{{post.author}}</b></p> {% endcomment %}
+                <span class="frame-header mg-t">{{post.title}}</span>
+                
+                <p style="font-weight: 300; font-size: 15px;"><i>Опубликовано: </i><b>{{post.author.name}}</b></p>
             </div>
             <hr>
-            <span class="frame-content">{{post.content}} <a href="{% url 'new_detail' pid=post.pk %}">Читать далее...</a></span>
-            {% comment %} <a href="{% url 'post_delete' pid=post.pk %}" style="color: gray; text-decoration: none; font-size: 50px; margin-right: 20px;">×</a> {% endcomment %}
-            
-            {% comment %} {% for att in post.att|slice:":1" %}
-            <div class="pic">
-                <img src="/media/{{att.file}}" alt="" width="100%" style="border-radius: 15px;">
+            <span class="frame-content">{{post.content}} </span>
+            <div class="frame-btn">
+                <p class="date">{{post.date}}</p>
+                <a href="{% url 'new_detail' pid=post.pk %}" class="btn">Читать далее...</a>
             </div>
-            {% endfor %} {% endcomment %}
             
         </div>
-    </div>
+        
     {% endfor %}
+    </div>
 {% endblock %}

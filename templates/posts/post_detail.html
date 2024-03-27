@@ -1,25 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="big-post-card">
-    <h1 style="margin: 0px 0;">{{post.title}}</h1>
-    <p style="font-weight: 300; font-size: 15px;"><i>Posted by: </i><b>{{post.author}}</b></p>
-    <p class="big_content">{{post.content}}</p>
-    {% for att in attachments %}
-    <div class="big_pic">
-        <img src="/media/{{att.file}}" alt="" width="100%">
+<div class="content-inner">
+    <div class="new-frame">
+        <h1 class="fame-header">{{post.title}}</h1>
+        <p style="font-weight: 300; font-size: 15px;">Опубликовано: <b>{{post.author.name}}</b></p>
+        <p class="big_content">{{post.content}}</p>
+        {% for att in attachments %}
+        {% if att.type == 'img' %}
+            <div class="big_pic">
+                <img src="/media/{{att.file}}" alt="" width="100%">
+            </div>
+        {% else %}
+            <div class="documents">
+                <iframe src="/media/{{att.file}}"></iframe>
+            </div>
+        {% endif %}
+        {% endfor %}
+        <p class="date mg-b">{{post.date}}</p>
     </div>
-    {% endfor %}
-    <p >timestamp: {{post.time_stamp}} {% if post.edited %} (edited) {% endif %}</p>
-    <a href="{% url 'new_edit' pid=post.pk %}"> Edit </a>
-</div>
-<div class="comments">
-   {% for comms in comments %}
-    <div class="comment-card">
-        <p class="comment-username">{{comms.author}}</p>
-        <p class="comment-time">{{comms.time_stamp}}</p>
-        <p class="comment-body">{{comms.content}}</p> 
+    <div class="comments">
+    {% for comms in comments %}
+        <div class="comment-card">
+            <p class="comment-username">{{comms.author}}</p>
+            <p class="comment-time">{{comms.time_stamp}}</p>
+            <p class="comment-body">{{comms.content}}</p> 
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div> 
 {% endblock %}

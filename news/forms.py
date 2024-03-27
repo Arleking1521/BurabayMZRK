@@ -22,9 +22,16 @@ class MultipleFileField(forms.FileField):
         else:
             result = single_file_clean(data,initial) 
         return result
+    
 
 class PostForm(forms.ModelForm):
     images = MultipleFileField()
     class Meta:
         model = Post
         fields = ('title', 'content', 'images')
+
+    def __init__(self, *args, **kwargs):
+        super(PostForm, self).__init__(*args, **kwargs)
+        self.fields['images'].widget.attrs['id'] = 'file-upload-input'
+        self.fields['images'].widget.attrs['onchange'] = 'show_files_name(this)'
+        

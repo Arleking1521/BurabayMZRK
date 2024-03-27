@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-split">
+    <div class="navigation">
+        <a href="{% url 'viewSovet'%}" >Наблюдательный совет</a>
+        <a href="{% url 'histories'%}" >История</a>
+        <a href="{% url 'ceo-info' %}" >Руководитель</a>
+        <a href="{% url 'vacancies'%}" >Вакансии</a>
+        <a href="{% url 'orgStruct'%}" >Организационная структура</a>
+        <a href="{% url 'reviews'%}" >Отзывы</a>
+        <a href="{% url 'contacts'%}" class = "selected">Контакты</a>
+        <a href="{% url 'rights-acts'%}" >Правовые акты</a>
+        <a href="{% url 'workers-info'%}" >Сведения о работниках</a>
+        <a href="{% url 'antiCor'%}" >Противодействие коррупции</a>
+        <a href="{% url 'ads' %}" >Протокол итогов</a>
+    </div>
+    <div class="rules">        
+        <div class="rule-plates">
+            <h2 class="Title">Контакты</h2>
+            <p class="table-title">Список руководителей РЦР «Бурабай»:</p>
+            <div class="tables">
+                <table >
+                
+                    <tr>
+                        <th>ФИО</th> <th>Должность</th> <th>Тел. номер</th> <th>Эл. почта</th>
+                    </tr>
+                    {% for manager in managers %}
+                        <tr>
+                            <td>{{manager.name}}</td> <td>{{manager.post}}</td> <td>{{manager.phone}}</td> <td>{{manager.email}}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            
+            <p class="table-title">График личного приема директора, заместителей директора на 2022 год:</p>
+            <div class="tables">
+                <table >
+                    <tr>
+                        <th>ФИО</th> <th>Должность</th> <th>Дни и время приема</th>
+                    </tr>
+                    {% for manager in managers %}
+                    {% if manager.show == 1 %}
+                        <tr>
+                            <td>{{manager.name}}</td> <td>{{manager.post}}</td> <td>{{manager.reception}}</td> 
+                        </tr>
+                    {% endif %}
+                    {% endfor %}
+                </table>
+            </div>
+
+            <p class="table-title">Контакты РГП на ПХВ РЦР «БУРАБАЙ» МЗ РК :</p>
+            <div class="contact-list">
+            {% for contact in contacts %}
+                <p><b>{{contact.title}}:</b> {{contact.info}}</p>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div> 
+
+{% endblock %}

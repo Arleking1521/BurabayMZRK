@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-split">
+    <div class="navigation">
+        <a href="{% url 'viewSovet'%}" >Наблюдательный совет</a>
+        <a href="{% url 'histories'%}" >История</a>
+        <a href="{% url 'ceo-info' %}" >Руководитель</a>
+        <a href="{% url 'vacancies'%}" >Вакансии</a>
+        <a href="{% url 'orgStruct'%}" >Организационная структура</a>
+        <a href="{% url 'reviews'%}"  class = "selected">Отзывы</a>
+        <a href="{% url 'contacts'%}" >Контакты</a>
+        <a href="{% url 'rights-acts'%}" >Правовые акты</a>
+        <a href="{% url 'workers-info'%}" >Сведения о работниках</a>
+        <a href="{% url 'antiCor'%}" >Противодействие коррупции</a>
+        <a href="{% url 'ads' %}" >Протокол итогов</a>
+    </div>
+    <div >
+        <div class="new-review">
+            <p class="Title">Отзывы</p>
+            <a href="{% url 'add-review' %}" class="btn">Оставить Отзыв</a>
+        </div>
+        {% for review in reviews %}
+            <div class="new-frame">
+                <div class="frame-header-block">
+                    <p><b>{{review.author}}</b></p>
+                </div>
+                <hr>
+                <span class="frame-content">{{review.review}} </span>
+                <div class="frame-btn">
+                    <p class="date">{{review.date}}</p>
+                    {% if not review.answer %}
+                        {% if  user.is_authenticated and user.is_staff %}
+                            <a href="{% url 'add-answer' rid=review.pk %}" class="btn">Ответить</a>
+                        {% endif %}
+                    {% endif %}
+                </div>
+                
+                    {% for answer in review.answer %}
+                        <div class="new-frame">
+                            <span class="frame-content">Ответ : {{answer.answer}} </span>
+                            <div class="frame-btn">
+                                <p class="date">{{answer.date}}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

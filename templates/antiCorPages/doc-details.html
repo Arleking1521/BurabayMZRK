@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-inner">
+    <span class="Title"> {{file.title}} </span>
+    <div class="documents">
+        <iframe src="/media/{{file.file}}"></iframe>
+    </div>
+</div>
+{% endblock %}

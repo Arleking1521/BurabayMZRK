@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-split">
+    <div class="navigation">
+        <a href="{% url 'viewSovet'%}" >Наблюдательный совет</a>
+        <a href="{% url 'histories'%}" >История</a>
+        <a href="{% url 'ceo-info' %}" >Руководитель</a>
+        <a href="{% url 'vacancies'%}" >Вакансии</a>
+        <a href="{% url 'orgStruct'%}" >Организационная структура</a>
+        <a href="{% url 'reviews'%}" >Отзывы</a>
+        <a href="{% url 'contacts'%}" >Контакты</a>
+        <a href="{% url 'rights-acts'%}" class = "selected">Правовые акты</a>
+        <a href="{% url 'workers-info'%}" >Сведения о работниках</a>
+        <a href="{% url 'antiCor'%}" >Противодействие коррупции</a>
+        <a href="{% url 'ads' %}" >Протокол итогов</a>
+    </div>
+    <div class="rules">
+        <span class="Title">Правовые акты</span>
+        
+        <div class="rule-plates new-frame">
+            <h2>Оказание платных услуг регламентируются следующими нормативными правовыми актами:</h2>
+            
+            <div>
+                {% for right in rights %}
+                    <ul>
+                    {% for part in right.info_parts %}
+                        <li>{{ part }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+</div> 
+{% endblock %}

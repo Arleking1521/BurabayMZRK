@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-split">
+    <div class="navigation">
+        <a href="{% url 'viewSovet'%}"  >Наблюдательный совет</a>
+        <a href="{% url 'histories'%}" >История</a>
+        <a href="{% url 'ceo-info' %}" >Руководитель</a>
+        <a href="{% url 'vacancies'%}" >Вакансии</a>
+        <a href="{% url 'orgStruct'%}" >Организационная структура</a>
+        <a href="{% url 'reviews'%}" >Отзывы</a>
+        <a href="{% url 'contacts'%}" >Контакты</a>
+        <a href="{% url 'rights-acts'%}" >Правовые акты</a>
+        <a href="{% url 'workers-info'%}" class = "selected">Сведения о работниках</a>
+        <a href="{% url 'antiCor'%}" >Противодействие коррупции</a>
+        <a href="{% url 'ads' %}" >Протокол итогов</a>
+    </div>
+    <div class="rules">
+        <span class="Title">Сведения о квалификации медицинских работников с высшим медицинским образованием</span>
+        
+        <div class="rule-plates">
+            <table >
+                <tr>
+                    <th>ФИО</th> <th>Должность</th> <th>Стаж</th> <th>Сертификат специалиста</th>
+                </tr>
+                {% for worker in workers %}
+                    <tr>
+                        <td>{{worker.name}}</td> <td>{{worker.post}}</td> <td>{{worker.work_exp}}</td> <td>
+                            {%for serts in worker.sertificates%}
+                                {{serts}}
+                            {%endfor%}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+    
+</div> 
+{% endblock %}

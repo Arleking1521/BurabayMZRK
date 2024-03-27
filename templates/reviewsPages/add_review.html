@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-card">
+    <form method="post" class="login-card">
+        {% csrf_token %}
+        <label for="id_author">Ваше имя:</label>
+        {{ form.author }}
+        <label for="id_IIN">ИИН:</label>
+        {{ form.IIN }}
+        <label for="id_review">Ваш отзыв:</label>
+        {{ form.review }}
+        
+        <button class="btn" type="submit">Отправить отзыв</button>
+    </form>
+</div>
+{% endblock %}

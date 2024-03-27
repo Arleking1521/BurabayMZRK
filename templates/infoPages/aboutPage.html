@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="content-inner">
+        <span class="Title">О НИИ «Курортологии и медицинской реабилитации»</span>
+
+        <div class="rule-plates new-frame">
+            <div class="rule-block">
+                {% if datas.about %}
+                {% for about_part in datas.about %}
+                    <p>{{ about_part }}</p>
+                {% endfor %}
+                {% endif %}
+            </div>
+            <div class="rule-block">
+                {% if datas.ldo %}
+                <p><b>ЛДО (Лечебно-диагностическое отделение) проводятся обследование и лечение</b></p>
+                <ul>
+                    {% for ldo_part in datas.ldo %}
+                        <li>{{ ldo_part }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            {% if datas.file %}
+            <div class="documents">
+                <iframe src="/media/{{datas.file}}"></iframe>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

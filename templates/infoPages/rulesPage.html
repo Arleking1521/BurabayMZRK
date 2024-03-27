@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-split">
+    <div class="navigation">
+        <a href="{% url 'med-services'%}">Медицинские услуги</a>
+        <a href="{% url 'rules'%}" class="selected">Правила санатория</a>
+    </div>
+    <div class="rules">
+        <span class="Title">Информация для пациентов:</span>
+        <div class="new-frame">
+            <div class="rule-plates">
+                <h2>Права пациентов</h2>
+                {% for rule in rules %}
+                <div class="rule-block">
+                    <h3>{{ rule.title }}</h3>
+                    <ul>
+                    {% for part in rule.info_parts %}
+                        <li>{{ part }}</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

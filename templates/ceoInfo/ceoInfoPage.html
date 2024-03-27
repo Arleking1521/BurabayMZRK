@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-split">
+    <div class="navigation">
+        <a href="{% url 'viewSovet'%}">Наблюдательный совет</a>
+        <a href="{% url 'histories'%}">История</a>
+        <a href="{% url 'ceo-info' %}" class="selected">Руководитель</a>
+        <a href="{% url 'vacancies'%}">Вакансии</a>
+        <a href="{% url 'orgStruct'%}">Организационная структура</a>
+        <a href="{% url 'reviews'%}">Отзывы</a>
+        <a href="{% url 'contacts'%}">Контакты</a>
+        <a href="{% url 'rights-acts'%}">Правовые акты</a>
+        <a href="{% url 'workers-info'%}">Сведения о работниках</a>
+        <a href="{% url 'antiCor'%}">Противодействие коррупции</a>
+        <a href="{% url 'ads' %}">Протокол итогов</a>
+    </div>
+    <div class="rules">
+        <span class="Title">Сведения о руководителе</span>
+        <div class="new-frame">
+            {% if not datas %}
+            {%else%}
+            <div class="ceo-info">
+                <div class="photo">
+                    <img src="../media/{{datas.photo}}" alt="">
+                </div>
+                
+                {% if datas.name and datas.date_of_birth %}
+                <span>
+                    <h1>{{datas.name}}</h1>
+                    <h2>{{datas.date_of_birth}}</h2>
+                </span>
+                
+            </div>
+            {% endif %}
+            <div class="rule-plates">
+                <div class="rule-block">
+                    {% if datas.edu_parts %}
+                    <h3>Образование:</h3>
+                    {% for part in datas.edu_parts %}
+                        <p><b>{{ part.university }}</b></p>
+                        <ul>
+                            {% for i in part.info %}
+                                <li>{{ i }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="rule-block">
+                    {% if datas.spec_parts %}
+                    <h3>Научная степень:</h3>
+                    <ul>
+                    {% for part in datas.spec_parts %}
+                        <li>{{ part }}</li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <div class="rule-block">
+                    {% if datas.work_parts %}
+                    <h3>Опыт работы:</h3>
+                    <ul>
+                        {% for part in datas.work_parts %}
+                            <li>{{ part }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <div class="rule-block">
+                    {% if datas.add_parts %}
+                    <h3>Дополнительно:</h3>
+                    
+                    <ul>
+                        {% for part in datas.add_parts %}
+                            <li>{{ part }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <div class="rule-block">
+                    {% if datas.awards_parts %}
+                    <h3>Награды:</h3>
+                    
+                    <ul>
+                        {% for part in datas.awards_parts %}
+                            <li>{{ part }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <div class="rule-block">
+                    {% if datas.sertif_parts %}
+                    <h3>Сертификаты:</h3>
+                    
+                    <ul>
+                        {% for part in datas.sertif_parts %}
+                            <li>{{ part }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <div class="rule-block">
+                    {% if datas.public_parts %}
+                    <h3>Публикации:</h3>
+                    
+                    <ul>
+                        {% for part in datas.public_parts %}
+                            <li>{{ part }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div> 
+{% endblock %}

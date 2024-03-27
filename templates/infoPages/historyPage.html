@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-split">
+    <div class="navigation">
+        <a href="{% url 'viewSovet'%}"  >Наблюдательный совет</a>
+        <a href="{% url 'histories'%}" class = "selected">История</a>
+        <a href="{% url 'ceo-info' %}" >Руководитель</a>
+        <a href="{% url 'vacancies'%}" >Вакансии</a>
+        <a href="{% url 'orgStruct'%}" >Организационная структура</a>
+        <a href="{% url 'reviews'%}" >Отзывы</a>
+        <a href="{% url 'contacts'%}" >Контакты</a>
+        <a href="{% url 'rights-acts'%}" >Правовые акты</a>
+        <a href="{% url 'workers-info'%}" >Сведения о работниках</a>
+        <a href="{% url 'antiCor'%}" >Противодействие коррупции</a>
+        <a href="{% url 'ads' %}" >Протокол итогов</a>
+    </div>
+    <div class="rules">
+        <span class="Title">Бурабай истории и легенды края</span>
+        
+        <div class="rule-plates">
+            {% for history in histories %}
+            <div class="new-frame">
+                <h3>{{ history.title }}</h3>
+                {% for part in history.info_parts %}
+                    <p>{{ part }}</p>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+</div> 
+{% endblock %}

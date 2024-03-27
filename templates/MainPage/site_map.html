@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="site_map">
+        <h1>Карта сайта:</h1>
+        <div>
+            <a href="{% url 'index' %}">Главная</a>
+            <a href="{% url 'news' %}">Новости</a>
+        </div>
+        <div>
+            <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjElEQVR4nO1YPYsTQRgeT4xeIVpYWKiRM0dg4vs8sy7KylVWdjaSK23ETlRQiFocV94PsPFKa8GvTm1ECxHEyq9TUUQUDwU/QERyKgMbGQa9YyebbBb3gYGQ7Pu8zzvvR2ZHqQoVKlTwYYxpk7xK8kW6rgA4qEYdcRxvAHCZ5K+/LQCX7DNqFCEiTQCP/iXeCWIBwE41SiA5TfKrI/QngHMiMmGX/Wy/c363z04XrVu12+3VAOZ8cbYH/GdF5ACAT142zsdxvKYQ8XEcbwJwI0t5pGX20CurW1rrzUMVLyK7ALz0hFwjuXEl22azuZ7kRS/wNyKSDEU8gEMAvnn1PqeUGstAs4pkB0DX4fkuIscHJrzRaKwFMO/t+kcA+0M5Se4j+d7jvJAkyXiu4kVkC8m7Xtof2AnTL3er1doK4J4XxH2S23MRH0XRXgCLg9ylJEnGLae3QYt99wXJPSS/OKQ/SB7NS7gPy5366Pn7bIzZrUJQr9fXkXzikL0lOaUGDJJTqa9eNh7b/gshOuKI/xBFUSOLvZ35JF8DeGWMmcxia4yZtAPC8X84JICbDsGxrPYictaxPxPg/4Rjf10FELzrEdgpFGA/65TBbFb7OI63ueWrAgQs9Qgy/knlEoBSasyxX8ps7Y60AOd5BKD60lAFwBJkIIqihj1Cr/QWtsx62mq1dhQWAIBTfYjvTZiThWbA7mJpM1D6HlgOVQCqygD/+xLqOH3UKV0Ti8gEyed2hb47s8gA8gCrAFjiDMC5NdNa19SQobWuOeelbmaCtAH/TJFhBqG1rgE47QSw0O9RoNAFYCbotgzAnaLFk7xt76hUCKyhjR7AM+8medA73k19zgSLr1ChgioFfgMGQtQjJVL73AAAAABJRU5ErkJggg==">
+                Пациентам</span>
+            <a href="{% url 'med-services'%}">Медицинские услуги</a>
+            <a href="{% url 'rules'%}">Правила санатория</a>
+        </div>
+        <div>
+            <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFX0lEQVR4nO1bS28cRRBu8QgCjASBI49ANtiaVX9fD4OQIYAF4h5L4BMKcMOGEMWGIMwp/yKAHU4mPyAKjjmbICDheSHBGH4ABKJAREJMQCX3hvKwY8/u9OzsrvaTRrKy/aiudFd9VV1tzAADDFAmoijaZq19guSbJI8A+JjkKslfSV72n/y96n+bl7bSR/qaXsTw8PBtzrkXSS4BuEjyn3Y+33dJxoqiaMh0O5xzu0jOkfyj3UVv8smYczKH6TaQ3EHyKIC1DOHPkDwMYBLA09baB6y1dyRJcqN88ne9Xt8pvwGYAvCO79NsV6wB+CCO4/u64nwDmG22zQF8RXLaWnt3u+NLXwAzAL5udjxk7srsRL1e30nydEqwqySPWWtHQ88Xx/GjAI77ObQiToksppMgOQ7gfEqQz+M4frgDcz+SVryXZdx0AgCmSP6tBPiT5D5jzHUdEcAYMzExcT2A/X5ubRumSp3YWvt2asufdc7RVAQAMYAVLZPIWNZkk6lt91mSJHeZiiEexBMoLdv+oJOQHE9t+xNJktxiugQiixAmfRyC2YT6un/WBu9TALeaLsPo6OjNJJeVnBcAPFho0CiKtqUs7lnZckWFJbnb/4/97r8TzrnHio47MjJyp7YJ4iIL8QQAs9rahzB4zrkJAFeaEJsr1trnio5vrX2I5CU17ltt01tsZHj7AhmsDfwhpYTfSN5edB6SBzRjbIs2kzyqSU4IPw9gb46g5/kQPIHkF0r+hZYGcM7tUoHN1VAML3WksnbBbCjqrL1CHMe13J25HtI2hDpmAqFTO6ABkotq3LncyQyqeD5kYLOVDfCZocI2IOVtruUTciVVSL6kQ1oTGGLpM7zAXwCeDT0fyW/UHC/k6bCkBJs2JcCfT9meFzxh+bCMEFoA4A21nsU8CY6Lavu3nczoFiRJcm/qGGQTI2vtk6rxd6ZPoNmhZJszG3I9dd1QwGHTJwDwrlrXwc0avq8MxqTpE5B8VSlgPrMhgJOq4VOmT+Cce0atazmzIYCfVMMdZQrlk5wzPnNcigdoQNLwal0/ZjYE8EujoYSWZQgjREfC3yYkaDEkCdKQzJU62j9vJtzlRsOy8u0Zi8/np9tErVa7Sc1xqTIFxCpAyfrKOA65FYCSjwCA13NEgzOVHQEoIwjg/tCCkDyUIxo8VKURPFmmG6xKAbndIMkjZRKhqhSQmwhRUWG5ou4XBQB4LxcVthuDoTN9tAN+yBUMRalwuF6v39PrCpCMcO5wWJC6YprpdQXIlm+JaLHElFhFCvhWrWfvlh2iKBrSSdEQV1ZVKQDA46ntP9RyWhzA8V5VQCq/mS8t3uxiRMpSTI8pQKfEW74YEUgpmhLqtFw3mR5RwNjY2A2+Sq29q7GG+9AuMUTVRaeCIZ9ouXb2JTMc5HocQFxEMAl1yw6H5R4zyPW4Ikan1GArRcPkMhMiPuxdDVYg0axEBsAnReqDfEpsMXRKTMp2pHxHyXlewuB2x2tWGKnrgJeKFkn54zAdIikqiwfwkbb6zrk9JiRIvtyNZXJRFG1P5TFEttc6UigJYEVqckxF8AZvtYwCi0z4cnZ9HMTiHgjBE1r08zMpa7/Wsdss59yeJoUOX0rWt+y5heFpktMweMHP/FYQC6tdZMqa7zaB4QOb/7lQkSGYtQ/5YEIqM6Q4oW0W9l8y46AOaTXDE5LTFQ+r4nXavJD1ZAbA95KXc869IhlaCUzEeovw/tsuAZj8Jm2kbboKPHXWF4ootjTEcVwr+9FUy1FdFYiiaEgKkrw9KKIM6bsoY/XEs7kcDyfnfUW3+O5z6uHkOf9vy33xcHKAAUzP4F8mRw3TQGHpfwAAAABJRU5ErkJggg==">
+                Информация</span>
+                <a href="{% url 'viewSovet'%}">Наблюдательный совет</a>
+                <a href="{% url 'histories'%}">История</a>
+                <a href="{% url 'ceo-info' %}">Руководитель</a>
+                <a href="{% url 'vacancies'%}">Вакансии</a>
+                <a href="{% url 'orgStruct'%}">Организационная структура</a>
+                <a href="{% url 'reviews'%}">Отзывы</a>
+                <a href="{% url 'contacts'%}">Контакты</a>
+                <a href="{% url 'rights-acts'%}">Правовые акты</a>
+                <a href="{% url 'workers-info'%}">Сведения о работниках</a>
+                <a href="{% url 'antiCor'%}">Противодействие коррупции</a>
+                <a href="{% url 'ads'%}">Протокол итогов</a>
+        </div>
+        <div>
+            <a href="{% url 'about'%}">О НИИ</a>
+        </div>
+    </div>
+{% endblock %}

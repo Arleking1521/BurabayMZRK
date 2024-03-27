@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-split">
+    <div class="navigation">
+        <a href="{% url 'viewSovet'%}" >Наблюдательный совет</a>
+        <a href="{% url 'histories'%}" >История</a>
+        <a href="{% url 'ceo-info' %}" >Руководитель</a>
+        <a href="{% url 'vacancies'%}" >Вакансии</a>
+        <a href="{% url 'orgStruct'%}" class = "selected">Организационная структура</a>
+        <a href="{% url 'reviews'%}" >Отзывы</a>
+        <a href="{% url 'contacts'%}" >Контакты</a>
+        <a href="{% url 'rights-acts'%}" >Правовые акты</a>
+        <a href="{% url 'workers-info'%}" >Сведения о работниках</a>
+        <a href="{% url 'antiCor'%}" >Противодействие коррупции</a>
+        <a href="{% url 'ads' %}" >Протокол итогов</a>
+    </div>
+    <div class="rules">
+        <span class="Title"> Организационная структура </span>
+        {% if file %}
+        <div class="documents">
+            <iframe src="/media/{{file.file}}"></iframe>
+        </div>
+        {% endif %}
+    </div>
+</div> 
+{% endblock %}

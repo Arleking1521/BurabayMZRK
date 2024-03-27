@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 
+AUTH_USER_MODEL = 'logRegisPages.CustomUser'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,6 +40,22 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'news',
+    'static_pages',
+    'info_page',
+    'contact_pages',
+    'history_legends',
+    'ceoInfo',
+    'vacancies',
+    'viewSovet',
+    'logRegisPages',
+    'orgStruct',
+    'ProvActs',
+    'workersInfo',
+    'antiCorruptions',
+    'medServices',
+    'aboutPage',
+    'reviewsBlog',
+    'advertisement',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +96,7 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'MinZdrav',
+        'NAME': 'minZdrav',
         'USER': 'postgres',
         'PASSWORD': '00000000',
         'HOST': 'localhost',
@@ -132,3 +150,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'karimknewit@gmail.com'
+EMAIL_HOST_PASSWORD = 'qusd nrpb jvye crtl'
+
+LOGOUT_URL = 'login'
+
+LOGIN_URL = 'login'
+# Application definition
