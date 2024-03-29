@@ -1,24 +1,24 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load i18n %}
 {% block content %}
 <div class="content-split">
     <div class="navigation">
-        <a href="{% url 'viewSovet'%}" >Наблюдательный совет</a>
-        <a href="{% url 'histories'%}" >История</a>
-        <a href="{% url 'ceo-info' %}" >Руководитель</a>
-        <a href="{% url 'vacancies'%}" class = "selected">Вакансии</a>
-        <a href="{% url 'orgStruct'%}" >Организационная структура</a>
-        <a href="{% url 'reviews'%}" >Отзывы</a>
-        <a href="{% url 'contacts'%}" >Контакты</a>
-        <a href="{% url 'rights-acts'%}" >Правовые акты</a>
-        <a href="{% url 'workers-info'%}" >Сведения о работниках</a>
-        <a href="{% url 'antiCor'%}" >Противодействие коррупции</a>
-        <a href="{% url 'ads' %}" >Протокол итогов</a>
+        <a href="{% url 'viewSovet'%}">{% trans 'Наблюдательный совет' %}</a>
+        <a href="{% url 'histories'%}">{% trans 'История' %}</a>
+        <a href="{% url 'ceo-info' %}">{% trans 'Руководитель' %}</a>
+        <a href="{% url 'vacancies'%}" class = "selected">{% trans 'Вакансии' %}</a>
+        <a href="{% url 'orgStruct'%}">{% trans 'Организационная структура' %}</a>
+        <a href="{% url 'reviews'%}">{% trans 'Отзывы' %}</a>
+        <a href="{% url 'contacts'%}">{% trans 'Контакты' %}</a>
+        <a href="{% url 'rights-acts'%}">{% trans 'Правовые акты' %}</a>
+        <a href="{% url 'workers-info'%}">{% trans 'Сведения о работниках' %}</a>
+        <a href="{% url 'antiCor'%}">{% trans 'Противодействие коррупции' %}</a>
+        <a href="{% url 'ads'%}">{% trans 'Протокол итогов' %}</a>
     </div>
     <div class="rules">
-        <span class="Title">Вакансии</span>
+        <span class="Title">{% trans 'Вакансии' %}</span>
         <div class="new-frame">
-            <h2>Республиканское государственное предприятие на праве хозяйственного ведения «Научно-исследовательский институт курортологии и медицинской реабилитации» Министерства здравоохранения Республики Казахстан объявляет  конкурс на занятие следующих вакантных должностей:</h2>
+            <h2>{% trans 'Республиканское государственное предприятие на праве хозяйственного ведения «Научно-исследовательский институт курортологии и медицинской реабилитации» Министерства здравоохранения Республики Казахстан объявляет  конкурс на занятие следующих вакантных должностей' %}:</h2>
             {% if datas %}
             <ul>
                 {% for data in datas %}
@@ -27,13 +27,13 @@
             </ul>
             {% endif %}
             {% if info.compAddress %}
-            <p>Место проведения конкурса: {{info.compAddress}}</p>
+            <p>{% trans 'Место проведения конкурса' %}: {{info.compAddress}}</p>
             {% endif %}
             {% if info.enterprise %}
-            <p>Место нахождения предпрятия: {{info.enterprise}}</p>
+            <p>{% trans 'Место нахождения предпрятия' %}: {{info.enterprise}}</p>
             {% endif %}
             {% if info.description %}
-            <p>Краткое описание основной деятельности предприятия: </p>
+            <p>{%trans 'Краткое описание основной деятельности предприятия'%}: </p>
             <ul>    
             {% for data in info.description %}
                 <li>{{data}}</li>
@@ -41,7 +41,7 @@
             </ul>
             {% endif %}
             {% if datas %}
-            <p><u>Требование к участникам конкурса:</u></p>
+            <p><u>{%trans 'Требование к участникам конкурса'%}:</u></p>
                 {% for data in datas %}
                 <p><b>{{data.vacancy}}:</b></p>
                     {% for part in data.requirement_parts %}
@@ -50,13 +50,13 @@
                 {% endfor %}
             {% endif %}
             {% if info.addmisions %}
-            <p><u>Для участия в конкурсе не принимаются следующие лица:</u> </p>
+            <p><u>{%trans 'Для участия в конкурсе не принимаются следующие лица'%}:</u> </p>
                 {% for data in info.addmisions %}
                 <p>{{data}}</p>
                 {% endfor %}
             {% endif %}
             {% if info.documents or info.additionally %}
-            <p><u>Для участия в конкурсе, необходимо представить следующие документы: </u> </p>
+            <p><u>{%trans 'Для участия в конкурсе, необходимо представить следующие документы'%}: </u> </p>
             {% endif %}
             {% if info.documents  %}
                 {% for data in info.documents %}

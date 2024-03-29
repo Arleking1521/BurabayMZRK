@@ -1,24 +1,24 @@
 {% extends 'base.html' %}
-
+{%load i18n%}
 {% block content %}
 <div class="content-split">
     <div class="navigation">
-        <a href="{% url 'viewSovet'%}" >Наблюдательный совет</a>
-        <a href="{% url 'histories'%}" >История</a>
-        <a href="{% url 'ceo-info' %}" >Руководитель</a>
-        <a href="{% url 'vacancies'%}" >Вакансии</a>
-        <a href="{% url 'orgStruct'%}" >Организационная структура</a>
-        <a href="{% url 'reviews'%}"  class = "selected">Отзывы</a>
-        <a href="{% url 'contacts'%}" >Контакты</a>
-        <a href="{% url 'rights-acts'%}" >Правовые акты</a>
-        <a href="{% url 'workers-info'%}" >Сведения о работниках</a>
-        <a href="{% url 'antiCor'%}" >Противодействие коррупции</a>
-        <a href="{% url 'ads' %}" >Протокол итогов</a>
+        <a href="{% url 'viewSovet'%}">{% trans 'Наблюдательный совет' %}</a>
+        <a href="{% url 'histories'%}">{% trans 'История' %}</a>
+        <a href="{% url 'ceo-info' %}">{% trans 'Руководитель' %}</a>
+        <a href="{% url 'vacancies'%}">{% trans 'Вакансии' %}</a>
+        <a href="{% url 'orgStruct'%}">{% trans 'Организационная структура' %}</a>
+        <a href="{% url 'reviews'%}" class="selected">{% trans 'Отзывы' %}</a>
+        <a href="{% url 'contacts'%}">{% trans 'Контакты' %}</a>
+        <a href="{% url 'rights-acts'%}">{% trans 'Правовые акты' %}</a>
+        <a href="{% url 'workers-info'%}">{% trans 'Сведения о работниках' %}</a>
+        <a href="{% url 'antiCor'%}">{% trans 'Противодействие коррупции' %}</a>
+        <a href="{% url 'ads'%}">{% trans 'Протокол итогов' %}</a>
     </div>
     <div >
         <div class="new-review">
-            <p class="Title">Отзывы</p>
-            <a href="{% url 'add-review' %}" class="btn">Оставить Отзыв</a>
+            <p class="Title">{%trans 'Отзывы'%}</p>
+            <a href="{% url 'add-review' %}" class="btn">{%trans 'Оставить Отзыв'%}</a>
         </div>
         {% for review in reviews %}
             <div class="new-frame">
@@ -31,19 +31,19 @@
                     <p class="date">{{review.date}}</p>
                     {% if not review.answer %}
                         {% if  user.is_authenticated and user.is_staff %}
-                            <a href="{% url 'add-answer' rid=review.pk %}" class="btn">Ответить</a>
+                            <a href="{% url 'add-answer' rid=review.pk %}" class="btn">{%trans 'Ответить'%}</a>
                         {% endif %}
                     {% endif %}
                 </div>
                 
-                    {% for answer in review.answer %}
-                        <div class="new-frame">
-                            <span class="frame-content">Ответ : {{answer.answer}} </span>
-                            <div class="frame-btn">
-                                <p class="date">{{answer.date}}</p>
-                            </div>
+                {% for answer in review.answer %}
+                    <div class="new-frame">
+                        <span class="frame-content">{%trans 'Ответ'%} : {{answer.answer}} </span>
+                        <div class="frame-btn">
+                            <p class="date">{{answer.date}}</p>
                         </div>
-                    {% endfor %}
+                    </div>
+                {% endfor %}
                 
             </div>
         {% endfor %}

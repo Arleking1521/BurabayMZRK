@@ -1,29 +1,29 @@
 {% extends 'base.html' %}
-
+{% load  i18n %}
 {% block content %}
 <div class="content-split">
     <div class="navigation">
-        <a href="{% url 'viewSovet'%}" >Наблюдательный совет</a>
-        <a href="{% url 'histories'%}" >История</a>
-        <a href="{% url 'ceo-info' %}" >Руководитель</a>
-        <a href="{% url 'vacancies'%}" >Вакансии</a>
-        <a href="{% url 'orgStruct'%}" >Организационная структура</a>
-        <a href="{% url 'reviews'%}" >Отзывы</a>
-        <a href="{% url 'contacts'%}" class = "selected">Контакты</a>
-        <a href="{% url 'rights-acts'%}" >Правовые акты</a>
-        <a href="{% url 'workers-info'%}" >Сведения о работниках</a>
-        <a href="{% url 'antiCor'%}" >Противодействие коррупции</a>
-        <a href="{% url 'ads' %}" >Протокол итогов</a>
+        <a href="{% url 'viewSovet'%}">{% trans 'Наблюдательный совет' %}</a>
+                <a href="{% url 'histories'%}">{% trans 'История' %}</a>
+                <a href="{% url 'ceo-info' %}">{% trans 'Руководитель' %}</a>
+                <a href="{% url 'vacancies'%}">{% trans 'Вакансии' %}</a>
+                <a href="{% url 'orgStruct'%}">{% trans 'Организационная структура' %}</a>
+                <a href="{% url 'reviews'%}">{% trans 'Отзывы' %}</a>
+                <a href="{% url 'contacts'%}" class = "selected">{% trans 'Контакты' %}</a>
+                <a href="{% url 'rights-acts'%}">{% trans 'Правовые акты' %}</a>
+                <a href="{% url 'workers-info'%}">{% trans 'Сведения о работниках' %}</a>
+                <a href="{% url 'antiCor'%}">{% trans 'Противодействие коррупции' %}</a>
+                <a href="{% url 'ads'%}">{% trans 'Протокол итогов' %}</a>
     </div>
     <div class="rules">        
         <div class="rule-plates">
-            <h2 class="Title">Контакты</h2>
-            <p class="table-title">Список руководителей РЦР «Бурабай»:</p>
+            <h2 class="Title">{% trans 'Контакты' %}</h2>
+            <p class="table-title">{% trans 'Список руководителей РЦР «Бурабай»' %}:</p>
             <div class="tables">
                 <table >
                 
                     <tr>
-                        <th>ФИО</th> <th>Должность</th> <th>Тел. номер</th> <th>Эл. почта</th>
+                        <th>{% trans 'ФИО' %}</th> <th>{% trans 'Должность' %}</th> <th>{% trans 'Тел. номер' %}</th> <th>{% trans 'Эл. почта' %}</th>
                     </tr>
                     {% for manager in managers %}
                         <tr>
@@ -33,11 +33,11 @@
                 </table>
             </div>
             
-            <p class="table-title">График личного приема директора, заместителей директора на 2022 год:</p>
+            <p class="table-title">{% trans 'График личного приема директора, заместителей директора на 2022 год' %}:</p>
             <div class="tables">
                 <table >
                     <tr>
-                        <th>ФИО</th> <th>Должность</th> <th>Дни и время приема</th>
+                        <th>{% trans 'ФИО' %}</th> <th>{% trans 'Должность' %}</th> <th>{% trans 'Дни и время приема' %}</th>
                     </tr>
                     {% for manager in managers %}
                     {% if manager.show == 1 %}
@@ -49,7 +49,7 @@
                 </table>
             </div>
 
-            <p class="table-title">Контакты РГП на ПХВ РЦР «БУРАБАЙ» МЗ РК :</p>
+            <p class="table-title">{% trans 'Контакты РГП на ПХВ РЦР «БУРАБАЙ» МЗ РК' %} :</p>
             <div class="contact-list">
             {% for contact in contacts %}
                 <p><b>{{contact.title}}:</b> {{contact.info}}</p>

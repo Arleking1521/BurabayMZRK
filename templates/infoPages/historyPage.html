@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
-
+{% load  i18n %}
 {% block content %}
 <div class="content-split">
     <div class="navigation">
-        <a href="{% url 'viewSovet'%}"  >Наблюдательный совет</a>
-        <a href="{% url 'histories'%}" class = "selected">История</a>
-        <a href="{% url 'ceo-info' %}" >Руководитель</a>
-        <a href="{% url 'vacancies'%}" >Вакансии</a>
-        <a href="{% url 'orgStruct'%}" >Организационная структура</a>
-        <a href="{% url 'reviews'%}" >Отзывы</a>
-        <a href="{% url 'contacts'%}" >Контакты</a>
-        <a href="{% url 'rights-acts'%}" >Правовые акты</a>
-        <a href="{% url 'workers-info'%}" >Сведения о работниках</a>
-        <a href="{% url 'antiCor'%}" >Противодействие коррупции</a>
-        <a href="{% url 'ads' %}" >Протокол итогов</a>
+        <a href="{% url 'viewSovet'%}">{% trans 'Наблюдательный совет' %}</a>
+                <a href="{% url 'histories'%}" class = "selected">{% trans 'История' %}</a>
+                <a href="{% url 'ceo-info' %}">{% trans 'Руководитель' %}</a>
+                <a href="{% url 'vacancies'%}">{% trans 'Вакансии' %}</a>
+                <a href="{% url 'orgStruct'%}">{% trans 'Организационная структура' %}</a>
+                <a href="{% url 'reviews'%}">{% trans 'Отзывы' %}</a>
+                <a href="{% url 'contacts'%}">{% trans 'Контакты' %}</a>
+                <a href="{% url 'rights-acts'%}">{% trans 'Правовые акты' %}</a>
+                <a href="{% url 'workers-info'%}">{% trans 'Сведения о работниках' %}</a>
+                <a href="{% url 'antiCor'%}">{% trans 'Противодействие коррупции' %}</a>
+                <a href="{% url 'ads'%}">{% trans 'Протокол итогов' %}</a>
     </div>
     <div class="rules">
-        <span class="Title">Бурабай истории и легенды края</span>
+        <span class="Title">{% trans 'Бурабай истории и легенды края' %}</span>
         
         <div class="rule-plates">
             {% for history in histories %}

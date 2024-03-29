@@ -10,7 +10,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.template import loader
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext as _
 
 
 class RegistrationForm(UserCreationForm):
@@ -41,12 +41,12 @@ class RegistrationForm(UserCreationForm):
     
     def __init__(self, *args, **kwargs):
         super(RegistrationForm, self).__init__(*args, **kwargs)
-        self.fields['name'].widget.attrs['placeholder'] = 'Имя'
-        self.fields['surename'].widget.attrs['placeholder'] = 'Фамилия'
-        self.fields['email'].widget.attrs['placeholder'] = 'Почта'
-        self.fields['phone'].widget.attrs['placeholder'] = 'Телефон'
-        self.fields['password1'].widget.attrs['placeholder'] = 'Пароль'
-        self.fields['password2'].widget.attrs['placeholder'] = 'Подтверждение пароля'
+        self.fields['name'].widget.attrs['placeholder'] = _('Имя')
+        self.fields['surename'].widget.attrs['placeholder'] = _('Фамилия')
+        self.fields['email'].widget.attrs['placeholder'] = _('Почта')
+        self.fields['phone'].widget.attrs['placeholder'] = _('Телефон')
+        self.fields['password1'].widget.attrs['placeholder'] = _('Пароль')
+        self.fields['password2'].widget.attrs['placeholder'] = _('Подтверждение пароля')
         self.fields['password1'].widget.attrs['id'] = 'password-input'
         self.fields['password2'].widget.attrs['id'] = 'password-input1'
 
@@ -67,11 +67,9 @@ class UserLoginForm(forms.Form):
     
     def __init__(self, *args, **kwargs):
         super(UserLoginForm, self).__init__(*args, **kwargs)
-        self.fields['email'].widget.attrs['placeholder'] = 'Почта'
-        self.fields['password'].widget.attrs['placeholder'] = 'Пароль'
+        self.fields['email'].widget.attrs['placeholder'] = _('Почта')
+        self.fields['password'].widget.attrs['placeholder'] = _('Пароль')
         self.fields['password'].widget.attrs['id'] = 'password-input'
-
-
 
 
 def _unicode_ci_compare(s1, s2):

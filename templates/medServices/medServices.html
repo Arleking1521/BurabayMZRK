@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block content %}
 <div class="content-split">
     <div class="navigation">
-        <a href="{% url 'med-services'%}" class = "selected">Медицинские услуги</a>
-        <a href="{% url 'rules'%}" >Правила санатория</a>
+        <a href="{% url 'med-services'%}" class = "selected">{%trans 'Медицинские услуги'%}</a>
+        <a href="{% url 'rules'%}" >{%trans 'Правила санатория'%}</a>
     </div>
     <div class="rules">
-        <span class="Title"> Медицинские услуги </span>
+        <span class="Title"> {%trans 'Медицинские услуги'%} </span>
         {% if file.file %}
         <div class="documents">
             <iframe src="/media/{{file.file}}"></iframe>

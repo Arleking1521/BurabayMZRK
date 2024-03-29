@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
-
+{% load i18n%}
 {% block content %}
 <div class="content-inner">
     <div class="new-frame">
         <h1 class="fame-header">{{post.title}}</h1>
-        <p style="font-weight: 300; font-size: 15px;">Опубликовано: <b>{{post.author.name}}</b></p>
+        <p style="font-weight: 300; font-size: 15px;">{%trans 'Опубликовано'%}: <b>{{post.author.name}}</b></p>
         <p class="big_content">{{post.content}}</p>
         {% for att in attachments %}
         {% if att.type == 'img' %}

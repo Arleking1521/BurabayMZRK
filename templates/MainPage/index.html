@@ -1,28 +1,26 @@
 {% extends 'base.html' %}
-
+{%load i18n%}
 {% block content %}
     <div class="banner">
         <div class="back-img">
-            <p class="banner-content">РГП на ПХВ  «Научно-исследовательский институт курортологии и медицинской реабилитации» МЗ РК</p>
-            <p class="banner-text">НИИ «Курортологии и медицинской реабилитации» в Бурабае - лидер в республиканской реабилитации бронхо-легочных заболеваний. Предоставляет комплексное восстановительное лечение с использованием современных методов и обширного обследования.</p>
-            <a href="{% url 'about' %}" class="btn3"> Читать Больше...</a>
+            <p class="banner-content">{%trans 'РГП на ПХВ  «Научно-исследовательский институт курортологии и медицинской реабилитации» МЗ РК'%}</p>
+            <p class="banner-text">{{content.bannerContent}}</p>
+            <a href="{% url 'about' %}" class="btn3"> {%trans 'Читать Больше'%}...</a>
         </div>
     </div>
     <div class="question-block">
         <div class="question-inner">
             <div class="info">
-                <p class="header">Руководитель</p>
-                <p class="header2">Каиргельдина Саягуль Айдаровна</p>
-                <p class="phrase">Приветствую Вас на официальной странице организации РГП на ПХВ РЦР «Бурабай» МЗ РК. 
-                    Этот сайт дает нам возможность быть открытыми для всех, кому интересна наша работа. Мы будем держать 
-                    Вас в курсе деятельности организации, ответим на все интересующие Вас вопросы.
-                    С уважением, Каиргельдина Саягуль Айдаровна.
+                <p class="header">{%trans 'Руководитель'%}</p>
+                <p class="header2">{{ceo.name}}</p>
+                <p class="phrase">{{content.ceo_appeal}}<br>
+                    {%trans 'С уважением'%}, {{ceo.name}}.
                 </p>
                 <div class="photo-2">
-                    <img src="../static/assets/ceo.jpeg" alt="">
+                    <img src="../static{{ceo.photo}}" alt="">
                 </div>
-                <a href="{% url 'add-review' %}" class="btn">Оставить Обращение</a>
-                <a href="{% url 'reviews' %}" class="btn2 mg-l">Посмотреть Обращения</a>
+                <a href="{% url 'add-review' %}" class="btn">{%trans 'Оставить Обращение'%}</a>
+                <a href="{% url 'reviews' %}" class="btn2 mg-l">{%trans 'Посмотреть Обращения'%}</a>
             </div>
             <div class="photo">
                 <img src="../static/assets/ceo.jpeg" alt="">
@@ -32,7 +30,7 @@
  
     <div class="small-banners">
         <a href="{% url 'symbols' %}" class="sm-banner">
-            <div><p>Государственные символы</p></div>
+            <div><p>{%trans 'Государственные символы'%}</p></div>
             <img src="../static/assets/banner-1.jpg" alt="">
         </a>
         <div class="swiper sw1">
@@ -53,7 +51,7 @@
           </div>
         
         <a href="{% url 'messages' %}" class="sm-banner">
-            <div><p>Послание Главы государства Касым-Жомарта Токаева народу Казахстана</p></div>
+            <div><p>{%trans 'Послание Главы государства Касым-Жомарта Токаева народу Казахстана'%}</p></div>
             <img src="../static/assets/banner-2.jpg" alt="">
         </a>
     </div>

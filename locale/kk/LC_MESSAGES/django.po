@@ -1,0 +1,627 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-30 00:41+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:220
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:221
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:229
+msgid "Django Documentation"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:230
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:238
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:239
+msgid "Get started with Django"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:247
+msgid "Django Community"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:248
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\directory_index.html:8
+#: .\myvenv\Lib\site-packages\django\views\templates\directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: .\templates\MainPage\index.html:6
+msgid ""
+"РГП на ПХВ  «Научно-исследовательский институт курортологии и медицинской "
+"реабилитации» МЗ РК"
+msgstr ""
+"ҚР ДСМ «курортология және медициналық оңалту ғылыми-зерттеу институты» ШЖҚ "
+"РМК"
+
+#: .\templates\MainPage\index.html:8
+msgid "Читать Больше"
+msgstr "Толығырақ"
+
+#: .\templates\MainPage\index.html:14 .\templates\MainPage\site_map.html:21
+#: .\templates\antiCorPages\antiCorList.html:8 .\templates\base.html:34
+#: .\templates\ceoInfo\ceoInfoPage.html:8
+#: .\templates\infoPages\advertisement.html:8
+#: .\templates\infoPages\contacts.html:8
+#: .\templates\infoPages\historyPage.html:8
+#: .\templates\infoPages\rightActs.html:8
+#: .\templates\infoPages\vacancyPage.html:8
+#: .\templates\infoPages\workersInfo.html:9
+#: .\templates\orgStructure\orgStruct.html:7
+#: .\templates\reviewsPages\reviews_list.html:8
+#: .\templates\viewSovet\viewSovet.html:8
+msgid "Руководитель"
+msgstr "Басшы"
+
+#: .\templates\MainPage\index.html:17
+msgid "С уважением"
+msgstr "Құрметпен"
+
+#: .\templates\MainPage\index.html:22
+msgid "Оставить Обращение"
+msgstr "Өтінішті Қалдыру"
+
+#: .\templates\MainPage\index.html:23
+msgid "Посмотреть Обращения"
+msgstr "Өтініштерді Қарау"
+
+#: .\templates\MainPage\index.html:33
+msgid "Государственные символы"
+msgstr "Мемлекеттік рәміздер"
+
+#: .\templates\MainPage\index.html:54
+msgid "Послание Главы государства Касым-Жомарта Токаева народу Казахстана"
+msgstr "Мемлекет Басшысы Қасым-Жомарт Тоқаевтың Қазақстан халқына Жолдауы"
+
+#: .\templates\MainPage\site_map.html:5
+msgid "Карта сайта"
+msgstr "Сайт картасы"
+
+#: .\templates\MainPage\site_map.html:7 .\templates\base.html:20
+msgid "Главная"
+msgstr "Басты"
+
+#: .\templates\MainPage\site_map.html:8 .\templates\base.html:21
+#: .\templates\posts\post_list.html:6
+msgid "Новости"
+msgstr "Жаңалықтар"
+
+#: .\templates\MainPage\site_map.html:12 .\templates\base.html:23
+msgid "Пациентам"
+msgstr "Науқастарға"
+
+#: .\templates\MainPage\site_map.html:13 .\templates\base.html:25
+#: .\templates\infoPages\rulesPage.html:6
+#: .\templates\medServices\medServices.html:6
+#: .\templates\medServices\medServices.html:10
+msgid "Медицинские услуги"
+msgstr "Медициналық қызметтер"
+
+#: .\templates\MainPage\site_map.html:14 .\templates\base.html:26
+#: .\templates\infoPages\rulesPage.html:7
+#: .\templates\medServices\medServices.html:7
+msgid "Правила санатория"
+msgstr "Санаторий ережелері"
+
+#: .\templates\MainPage\site_map.html:18 .\templates\base.html:30
+#: .\templates\posts\post_new.html:10
+msgid "Информация"
+msgstr "Ақпарат"
+
+#: .\templates\MainPage\site_map.html:19
+#: .\templates\antiCorPages\antiCorList.html:6 .\templates\base.html:32
+#: .\templates\ceoInfo\ceoInfoPage.html:6
+#: .\templates\infoPages\advertisement.html:6
+#: .\templates\infoPages\contacts.html:6
+#: .\templates\infoPages\historyPage.html:6
+#: .\templates\infoPages\rightActs.html:6
+#: .\templates\infoPages\vacancyPage.html:6
+#: .\templates\infoPages\workersInfo.html:7
+#: .\templates\reviewsPages\reviews_list.html:6
+#: .\templates\viewSovet\doc-details.html:5
+#: .\templates\viewSovet\viewSovet.html:6
+#: .\templates\viewSovet\viewSovet.html:19
+msgid "Наблюдательный совет"
+msgstr "Бақылау кеңесі"
+
+#: .\templates\MainPage\site_map.html:20
+#: .\templates\antiCorPages\antiCorList.html:7 .\templates\base.html:33
+#: .\templates\ceoInfo\ceoInfoPage.html:7
+#: .\templates\infoPages\advertisement.html:7
+#: .\templates\infoPages\contacts.html:7
+#: .\templates\infoPages\historyPage.html:7
+#: .\templates\infoPages\rightActs.html:7
+#: .\templates\infoPages\vacancyPage.html:7
+#: .\templates\infoPages\workersInfo.html:8
+#: .\templates\orgStructure\orgStruct.html:6
+#: .\templates\reviewsPages\reviews_list.html:7
+#: .\templates\viewSovet\viewSovet.html:7
+msgid "История"
+msgstr "Тарих"
+
+#: .\templates\MainPage\site_map.html:22
+#: .\templates\antiCorPages\antiCorList.html:9 .\templates\base.html:35
+#: .\templates\ceoInfo\ceoInfoPage.html:9
+#: .\templates\infoPages\advertisement.html:9
+#: .\templates\infoPages\contacts.html:9
+#: .\templates\infoPages\historyPage.html:9
+#: .\templates\infoPages\rightActs.html:9
+#: .\templates\infoPages\vacancyPage.html:9
+#: .\templates\infoPages\vacancyPage.html:19
+#: .\templates\infoPages\workersInfo.html:10
+#: .\templates\orgStructure\orgStruct.html:8
+#: .\templates\reviewsPages\reviews_list.html:9
+#: .\templates\viewSovet\viewSovet.html:9
+msgid "Вакансии"
+msgstr "Бос жұмыс орындары"
+
+#: .\templates\MainPage\site_map.html:23
+#: .\templates\antiCorPages\antiCorList.html:10 .\templates\base.html:36
+#: .\templates\ceoInfo\ceoInfoPage.html:10
+#: .\templates\infoPages\advertisement.html:10
+#: .\templates\infoPages\contacts.html:10
+#: .\templates\infoPages\historyPage.html:10
+#: .\templates\infoPages\rightActs.html:10
+#: .\templates\infoPages\vacancyPage.html:10
+#: .\templates\infoPages\workersInfo.html:11
+#: .\templates\orgStructure\orgStruct.html:9
+#: .\templates\orgStructure\orgStruct.html:18
+#: .\templates\reviewsPages\reviews_list.html:10
+#: .\templates\viewSovet\viewSovet.html:10
+msgid "Организационная структура"
+msgstr "Ұйымдық құрылым"
+
+#: .\templates\MainPage\site_map.html:24
+#: .\templates\antiCorPages\antiCorList.html:11 .\templates\base.html:37
+#: .\templates\ceoInfo\ceoInfoPage.html:11
+#: .\templates\infoPages\advertisement.html:11
+#: .\templates\infoPages\contacts.html:11
+#: .\templates\infoPages\historyPage.html:11
+#: .\templates\infoPages\rightActs.html:11
+#: .\templates\infoPages\vacancyPage.html:11
+#: .\templates\infoPages\workersInfo.html:12
+#: .\templates\orgStructure\orgStruct.html:10
+#: .\templates\reviewsPages\reviews_list.html:11
+#: .\templates\reviewsPages\reviews_list.html:20
+#: .\templates\viewSovet\viewSovet.html:11
+msgid "Отзывы"
+msgstr "Пікірлер"
+
+#: .\templates\MainPage\site_map.html:25
+#: .\templates\antiCorPages\antiCorList.html:12 .\templates\base.html:38
+#: .\templates\ceoInfo\ceoInfoPage.html:12
+#: .\templates\infoPages\advertisement.html:12
+#: .\templates\infoPages\contacts.html:12
+#: .\templates\infoPages\contacts.html:20
+#: .\templates\infoPages\historyPage.html:12
+#: .\templates\infoPages\rightActs.html:12
+#: .\templates\infoPages\vacancyPage.html:12
+#: .\templates\infoPages\workersInfo.html:13
+#: .\templates\orgStructure\orgStruct.html:11
+#: .\templates\reviewsPages\reviews_list.html:12
+#: .\templates\viewSovet\viewSovet.html:12
+msgid "Контакты"
+msgstr "Байланыс"
+
+#: .\templates\MainPage\site_map.html:26
+#: .\templates\antiCorPages\antiCorList.html:13 .\templates\base.html:39
+#: .\templates\ceoInfo\ceoInfoPage.html:13
+#: .\templates\infoPages\advertisement.html:13
+#: .\templates\infoPages\contacts.html:13
+#: .\templates\infoPages\historyPage.html:13
+#: .\templates\infoPages\rightActs.html:13
+#: .\templates\infoPages\rightActs.html:19
+#: .\templates\infoPages\vacancyPage.html:13
+#: .\templates\infoPages\workersInfo.html:14
+#: .\templates\orgStructure\orgStruct.html:12
+#: .\templates\reviewsPages\reviews_list.html:13
+#: .\templates\viewSovet\viewSovet.html:13
+msgid "Правовые акты"
+msgstr "Құқықтық актілер"
+
+#: .\templates\MainPage\site_map.html:27
+#: .\templates\antiCorPages\antiCorList.html:14 .\templates\base.html:40
+#: .\templates\ceoInfo\ceoInfoPage.html:14
+#: .\templates\infoPages\advertisement.html:14
+#: .\templates\infoPages\contacts.html:14
+#: .\templates\infoPages\historyPage.html:14
+#: .\templates\infoPages\rightActs.html:14
+#: .\templates\infoPages\vacancyPage.html:14
+#: .\templates\infoPages\workersInfo.html:15
+#: .\templates\orgStructure\orgStruct.html:13
+#: .\templates\reviewsPages\reviews_list.html:14
+#: .\templates\viewSovet\viewSovet.html:14
+msgid "Сведения о работниках"
+msgstr "Қызметкерлер туралы мәліметтер"
+
+#: .\templates\MainPage\site_map.html:28
+#: .\templates\antiCorPages\antiCorList.html:15 .\templates\base.html:41
+#: .\templates\ceoInfo\ceoInfoPage.html:15
+#: .\templates\infoPages\advertisement.html:15
+#: .\templates\infoPages\contacts.html:15
+#: .\templates\infoPages\historyPage.html:15
+#: .\templates\infoPages\rightActs.html:15
+#: .\templates\infoPages\vacancyPage.html:15
+#: .\templates\infoPages\workersInfo.html:16
+#: .\templates\orgStructure\orgStruct.html:14
+#: .\templates\reviewsPages\reviews_list.html:15
+#: .\templates\viewSovet\viewSovet.html:15
+msgid "Противодействие коррупции"
+msgstr "Сыбайлас жемқорлыққа қарсы іс-қимыл"
+
+#: .\templates\MainPage\site_map.html:29
+#: .\templates\antiCorPages\antiCorList.html:16 .\templates\base.html:42
+#: .\templates\ceoInfo\ceoInfoPage.html:16
+#: .\templates\infoPages\advertisement.html:16
+#: .\templates\infoPages\contacts.html:16
+#: .\templates\infoPages\historyPage.html:16
+#: .\templates\infoPages\rightActs.html:16
+#: .\templates\infoPages\vacancyPage.html:16
+#: .\templates\infoPages\workersInfo.html:17
+#: .\templates\orgStructure\orgStruct.html:15
+#: .\templates\reviewsPages\reviews_list.html:16
+#: .\templates\viewSovet\viewSovet.html:16
+msgid "Протокол итогов"
+msgstr "Қорытынды хаттама"
+
+#: .\templates\MainPage\site_map.html:32 .\templates\base.html:45
+msgid "О НИИ"
+msgstr "ҒЗИ туралы"
+
+#: .\templates\antiCorPages\antiCorList.html:19
+msgid "План по противодействию коррупции"
+msgstr "Сыбайлас жемқорлыққа қарсы іс-қимыл жоспары"
+
+#: .\templates\base.html:73
+msgid "Выйти"
+msgstr "Шығу"
+
+#: .\templates\base.html:75 .\templates\registration\login.html:14
+#: .\templates\registration\pass_remember.html:11
+#: .\templates\registration\registration.html:63
+msgid "Войти"
+msgstr "Кіру"
+
+#: .\templates\base.html:76 .\templates\registration\registration.html:5
+msgid "Регистрация"
+msgstr "Тіркеу"
+
+#: .\templates\base.html:92
+msgid "Телефон доверия"
+msgstr "Сенім телефоны"
+
+#: .\templates\base.html:96
+msgid ""
+"Казахстан, Акмолинская область, Бурабайский район, Боровская п.а., п."
+"Бурабай, ул.Кенесары 1"
+msgstr ""
+"Қазақстан, Ақмола облысы, Бурабай ауданы, Боровская к. а., п.Бурабай, "
+"Кенесары көшесі, 1"
+
+#: .\templates\ceoInfo\ceoInfoPage.html:19
+msgid "Сведения о руководителе"
+msgstr "Басшы туралы мәліметтер"
+
+#: .\templates\ceoInfo\ceoInfoPage.html:39
+msgid "Образование"
+msgstr "Білім"
+
+#: .\templates\ceoInfo\ceoInfoPage.html:52
+msgid "Научная степень"
+msgstr "Ғылыми дәрежесі"
+
+#: .\templates\ceoInfo\ceoInfoPage.html:62
+msgid "Опыт работы"
+msgstr "Жұмыс тәжірибесі"
+
+#: .\templates\ceoInfo\ceoInfoPage.html:72
+msgid "Дополнительно"
+msgstr "Қосымша"
+
+#: .\templates\ceoInfo\ceoInfoPage.html:83
+msgid "Награды"
+msgstr "Марапаттар"
+
+#: .\templates\ceoInfo\ceoInfoPage.html:94
+msgid "Сертификаты"
+msgstr "Сертификаттар"
+
+#: .\templates\ceoInfo\ceoInfoPage.html:105
+msgid "Публикации"
+msgstr "Жарияланымдар"
+
+#: .\templates\infoPages\aboutPage.html:6
+msgid "О НИИ «Курортологии и медицинской реабилитации»"
+msgstr "«Курортология және медициналық оңалту» ҒЗИ туралы"
+
+#: .\templates\infoPages\aboutPage.html:18
+msgid ""
+"ЛДО (Лечебно-диагностическое отделение) проводятся обследование и лечение"
+msgstr "ЕДБ (емдеу-диагностикалық бөлімше) тексеру және емдеу жүргізіледі"
+
+#: .\templates\infoPages\advertisement.html:25
+msgid "Название"
+msgstr "Атауы"
+
+#: .\templates\infoPages\advertisement.html:25
+msgid "Скачать"
+msgstr "Жүктеу"
+
+#: .\templates\infoPages\contacts.html:21
+msgid "Список руководителей РЦР «Бурабай»"
+msgstr "Қызметкерлер туралы мәліметтер"
+
+#: .\templates\infoPages\contacts.html:26
+#: .\templates\infoPages\contacts.html:40
+#: .\templates\infoPages\workersInfo.html:25
+msgid "ФИО"
+msgstr "ТАӘ"
+
+#: .\templates\infoPages\contacts.html:26
+#: .\templates\infoPages\contacts.html:40
+#: .\templates\infoPages\workersInfo.html:25
+msgid "Должность"
+msgstr "Лауазымы"
+
+#: .\templates\infoPages\contacts.html:26
+msgid "Тел. номер"
+msgstr "Тел. нөмірі"
+
+#: .\templates\infoPages\contacts.html:26
+msgid "Эл. почта"
+msgstr "Электрондық пошта"
+
+#: .\templates\infoPages\contacts.html:36
+msgid "График личного приема директора, заместителей директора на 2022 год"
+msgstr ""
+"Директордың, директордың орынбасарларының 2022 жылға арналған жеке қабылдау "
+"кестесі"
+
+#: .\templates\infoPages\contacts.html:40
+msgid "Дни и время приема"
+msgstr "Қабылдау күндері мен уақыты"
+
+#: .\templates\infoPages\contacts.html:52
+#, fuzzy
+#| msgid "Контакты РГП на ПХВ РДЦ «БУРАБАЙ» МЗ РК"
+msgid "Контакты РГП на ПХВ РЦР «БУРАБАЙ» МЗ РК"
+msgstr "ҚР ДСМ «БУРАБАЙ» РДО ШЖҚ РМК байланыстары"
+
+#: .\templates\infoPages\historyPage.html:19
+msgid "Бурабай истории и легенды края"
+msgstr "Бурабай өлке тарихы мен аңыздары"
+
+#: .\templates\infoPages\rightActs.html:22
+msgid ""
+"Оказание платных услуг регламентируются следующими нормативными правовыми "
+"актами"
+msgstr ""
+"Ақылы қызметтер көрсету мынадай нормативтік құқықтық актілермен "
+"регламенттеледі"
+
+#: .\templates\infoPages\rulesPage.html:10
+#, fuzzy
+#| msgid "Информация"
+msgid "Информация для пациентов"
+msgstr "Ақпарат"
+
+#: .\templates\infoPages\rulesPage.html:13
+#, fuzzy
+#| msgid "Пациентам"
+msgid "Права пациентов"
+msgstr "Науқастарға"
+
+#: .\templates\infoPages\vacancyPage.html:21
+msgid ""
+"Республиканское государственное предприятие на праве хозяйственного ведения "
+"«Научно-исследовательский институт курортологии и медицинской реабилитации» "
+"Министерства здравоохранения Республики Казахстан объявляет  конкурс на "
+"занятие следующих вакантных должностей"
+msgstr ""
+"Қазақстан Республикасы Денсаулық сақтау министрлігінің «Курортология және "
+"медициналық оңалту ғылыми-зерттеу институты» шаруашылық жүргізу құқығындағы "
+"республикалық мемлекеттік кәсіпорны мынадай бос лауазымдарға орналасуға "
+"конкурс жариялайды"
+
+#: .\templates\infoPages\vacancyPage.html:30
+msgid "Место проведения конкурса"
+msgstr "Конкурсты өткізу орны"
+
+#: .\templates\infoPages\vacancyPage.html:33
+msgid "Место нахождения предпрятия"
+msgstr "Кәсіпорынның орналасқан жері"
+
+#: .\templates\infoPages\vacancyPage.html:36
+msgid "Краткое описание основной деятельности предприятия"
+msgstr "Кәсіпорынның негізгі қызметінің қысқаша сипаттамасы"
+
+#: .\templates\infoPages\vacancyPage.html:44
+msgid "Требование к участникам конкурса"
+msgstr "Конкурсқа қатысушыларға қойылатын талаптар"
+
+#: .\templates\infoPages\vacancyPage.html:53
+msgid "Для участия в конкурсе не принимаются следующие лица"
+msgstr "Конкурсқа қатысу үшін келесі тұлғалар қабылданбайды"
+
+#: .\templates\infoPages\vacancyPage.html:59
+msgid "Для участия в конкурсе, необходимо представить следующие документы"
+msgstr "Конкурсқа қатысу үшін келесі құжаттарды ұсыну қажет"
+
+#: .\templates\infoPages\workersInfo.html:20
+msgid "Сведения о квалификации медицинских работников"
+msgstr "Медицина қызметкерлерінің біліктілігі туралы мәліметтер"
+
+#: .\templates\infoPages\workersInfo.html:25
+msgid "Стаж"
+msgstr "Еңбек өтілі"
+
+#: .\templates\infoPages\workersInfo.html:25
+msgid "Сертификат специалиста"
+msgstr "Маман сертификаты"
+
+#: .\templates\posts\post_detail.html:7 .\templates\posts\post_list.html:16
+msgid "Опубликовано"
+msgstr "Жарияланды"
+
+#: .\templates\posts\post_list.html:8
+msgid "Добавить объявление"
+msgstr "Жарнама қосу"
+
+#: .\templates\posts\post_list.html:22
+msgid "Читать далее"
+msgstr "Ары қарай оқу"
+
+#: .\templates\posts\post_new.html:5
+msgid "Новое объявление"
+msgstr "Жаңа хабарландыру"
+
+#: .\templates\posts\post_new.html:8
+msgid "Заголовок"
+msgstr "Тақырып"
+
+#: .\templates\posts\post_new.html:12
+msgid "Выбрать файл"
+msgstr "Файлды таңдаңыз"
+
+#: .\templates\posts\post_new.html:19
+msgid "Опубликовать"
+msgstr "Жариялау"
+
+#: .\templates\registration\login.html:5
+msgid "Войти в систему"
+msgstr "Жүйеге кіру"
+
+#: .\templates\registration\login.html:15
+#: .\templates\registration\password_reset_form.html:8
+msgid "Забыли пароль"
+msgstr "Құпия сөзді ұмыттыңыз ба"
+
+#: .\templates\registration\pass_remember.html:5
+#: .\templates\registration\password_reset_confirm.html:5
+msgid "Восстановление пароля"
+msgstr "Құпия сөзді қалпына келтіру"
+
+#: .\templates\registration\pass_remember.html:7
+msgid "Введите адрес Вашей электронной почты"
+msgstr "Электрондық пошта мекенжайын енгізіңіз"
+
+#: .\templates\registration\pass_remember.html:10
+msgid "Восстановить"
+msgstr "Қалпына келтіру"
+
+#: .\templates\registration\password_reset_confirm.html:16
+msgid "Изменить пароль"
+msgstr "Құпия сөзді өзгерту"
+
+#: .\templates\registration\password_reset_form.html:12
+msgid "Отправить письмо для сброса пароля"
+msgstr "Құпия сөзді қалпына келтіру үшін хат жіберіңіз"
+
+#: .\templates\registration\registration.html:62
+msgid "Зарегестрироваться"
+msgstr "Тіркелу"
+
+#: .\templates\reviewsPages\add_answer.html:6
+msgid "Ответ на отзыв"
+msgstr "Пікірге жауап"
+
+#: .\templates\reviewsPages\add_answer.html:7
+msgid "Отзыв от"
+msgstr "Пікір қалдырды "
+
+#: .\templates\reviewsPages\add_answer.html:11
+msgid "Ответ отзыв"
+msgstr "Пікірге жауап"
+
+#: .\templates\reviewsPages\add_answer.html:13
+msgid "Отправить ответ"
+msgstr "Жауап жіберу"
+
+#: .\templates\reviewsPages\add_review.html:7
+msgid "Ваше имя"
+msgstr "Сіздің атыңыз"
+
+#: .\templates\reviewsPages\add_review.html:9
+msgid "ИИН"
+msgstr "ЖСН"
+
+#: .\templates\reviewsPages\add_review.html:11
+msgid "Ваш отзыв"
+msgstr "Сіздің пікіріңіз"
+
+#: .\templates\reviewsPages\add_review.html:14
+msgid "Отправить отзыв"
+msgstr "Пікір жіберу"
+
+#: .\templates\reviewsPages\reviews_list.html:21
+msgid "Оставить Отзыв"
+msgstr "Пікір Қалдыру"
+
+#: .\templates\reviewsPages\reviews_list.html:34
+msgid "Ответить"
+msgstr "Жауап беру"
+
+#: .\templates\reviewsPages\reviews_list.html:41
+msgid "Ответ"
+msgstr "Жауап"
+
+#~ msgid "Имя"
+#~ msgstr "Аты"
+
+#~ msgid "Фамилия"
+#~ msgstr "Тегі"
+
+#~ msgid "Почта"
+#~ msgstr "Пошта"
+
+#~ msgid "Телефон"
+#~ msgstr "Телефон"
+
+#~ msgid "Пароль"
+#~ msgstr "Құпия сөз"
+
+#~ msgid "Подтверждение пароля"
+#~ msgstr "Құпия сөзді растау"

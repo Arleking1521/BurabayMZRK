@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-
+{% load  i18n %}
 {% block content %}
 
     <div class="content-inner">
-        <span class="Title">О НИИ «Курортологии и медицинской реабилитации»</span>
+        <span class="Title">{% trans 'О НИИ «Курортологии и медицинской реабилитации»' %}</span>
 
         <div class="rule-plates new-frame">
             <div class="rule-block">
@@ -15,7 +15,7 @@
             </div>
             <div class="rule-block">
                 {% if datas.ldo %}
-                <p><b>ЛДО (Лечебно-диагностическое отделение) проводятся обследование и лечение</b></p>
+                <p><b>{% trans 'ЛДО (Лечебно-диагностическое отделение) проводятся обследование и лечение' %}</b></p>
                 <ul>
                     {% for ldo_part in datas.ldo %}
                         <li>{{ ldo_part }}</li>

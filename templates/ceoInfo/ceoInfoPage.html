@@ -1,28 +1,28 @@
 {% extends 'base.html' %}
-
+{% load  i18n %}
 {% block content %}
 <div class="content-split">
     <div class="navigation">
-        <a href="{% url 'viewSovet'%}">Наблюдательный совет</a>
-        <a href="{% url 'histories'%}">История</a>
-        <a href="{% url 'ceo-info' %}" class="selected">Руководитель</a>
-        <a href="{% url 'vacancies'%}">Вакансии</a>
-        <a href="{% url 'orgStruct'%}">Организационная структура</a>
-        <a href="{% url 'reviews'%}">Отзывы</a>
-        <a href="{% url 'contacts'%}">Контакты</a>
-        <a href="{% url 'rights-acts'%}">Правовые акты</a>
-        <a href="{% url 'workers-info'%}">Сведения о работниках</a>
-        <a href="{% url 'antiCor'%}">Противодействие коррупции</a>
-        <a href="{% url 'ads' %}">Протокол итогов</a>
+        <a href="{% url 'viewSovet'%}">{% trans 'Наблюдательный совет' %}</a>
+                <a href="{% url 'histories'%}">{% trans 'История' %}</a>
+                <a href="{% url 'ceo-info' %}" class = "selected">{% trans 'Руководитель' %}</a>
+                <a href="{% url 'vacancies'%}">{% trans 'Вакансии' %}</a>
+                <a href="{% url 'orgStruct'%}">{% trans 'Организационная структура' %}</a>
+                <a href="{% url 'reviews'%}">{% trans 'Отзывы' %}</a>
+                <a href="{% url 'contacts'%}">{% trans 'Контакты' %}</a>
+                <a href="{% url 'rights-acts'%}">{% trans 'Правовые акты' %}</a>
+                <a href="{% url 'workers-info'%}">{% trans 'Сведения о работниках' %}</a>
+                <a href="{% url 'antiCor'%}">{% trans 'Противодействие коррупции' %}</a>
+                <a href="{% url 'ads'%}">{% trans 'Протокол итогов' %}</a>
     </div>
     <div class="rules">
-        <span class="Title">Сведения о руководителе</span>
+        <span class="Title">{% trans 'Сведения о руководителе' %}</span>
         <div class="new-frame">
             {% if not datas %}
             {%else%}
             <div class="ceo-info">
                 <div class="photo">
-                    <img src="../media/{{datas.photo}}" alt="">
+                    <img src="../../media/{{datas.photo}}" alt="">
                 </div>
                 
                 {% if datas.name and datas.date_of_birth %}
@@ -36,7 +36,7 @@
             <div class="rule-plates">
                 <div class="rule-block">
                     {% if datas.edu_parts %}
-                    <h3>Образование:</h3>
+                    <h3>{% trans 'Образование' %}:</h3>
                     {% for part in datas.edu_parts %}
                         <p><b>{{ part.university }}</b></p>
                         <ul>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="rule-block">
                     {% if datas.spec_parts %}
-                    <h3>Научная степень:</h3>
+                    <h3>{% trans 'Научная степень' %}:</h3>
                     <ul>
                     {% for part in datas.spec_parts %}
                         <li>{{ part }}</li>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="rule-block">
                     {% if datas.work_parts %}
-                    <h3>Опыт работы:</h3>
+                    <h3>{% trans 'Опыт работы' %}:</h3>
                     <ul>
                         {% for part in datas.work_parts %}
                             <li>{{ part }}</li>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="rule-block">
                     {% if datas.add_parts %}
-                    <h3>Дополнительно:</h3>
+                    <h3>{% trans 'Дополнительно' %}:</h3>
                     
                     <ul>
                         {% for part in datas.add_parts %}
@@ -80,7 +80,7 @@
                 </div>
                 <div class="rule-block">
                     {% if datas.awards_parts %}
-                    <h3>Награды:</h3>
+                    <h3>{% trans 'Награды' %}:</h3>
                     
                     <ul>
                         {% for part in datas.awards_parts %}
@@ -91,7 +91,7 @@
                 </div>
                 <div class="rule-block">
                     {% if datas.sertif_parts %}
-                    <h3>Сертификаты:</h3>
+                    <h3>{% trans 'Сертификаты' %}:</h3>
                     
                     <ul>
                         {% for part in datas.sertif_parts %}
@@ -102,7 +102,7 @@
                 </div>
                 <div class="rule-block">
                     {% if datas.public_parts %}
-                    <h3>Публикации:</h3>
+                    <h3>{% trans 'Публикации' %}:</h3>
                     
                     <ul>
                         {% for part in datas.public_parts %}

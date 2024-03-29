@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block content %}
     <div class="form-card">
-        <h1>Новое объявление</h1>
+        <h1>{%trans 'Новое объявление'%}</h1>
         <form method="post" enctype="multipart/form-data" class="login-card">
             {% csrf_token %}
-            <label for="id_title">Заголовок:</label>
+            <label for="id_title">{%trans 'Заголовок'%}:</label>
             {{ form.title }}
-            <label for="id_content">Информация:</label>
+            <label for="id_content">{%trans 'Информация'%}:</label>
             {{ form.content }}
-            <label for="file-upload-input" class="btn mg-b custom-file-upload" >Выбрать файл</label>
+            <label for="file-upload-input" class="btn mg-b custom-file-upload" >{%trans 'Выбрать файл'%}</label>
             <div style="display: none;">
                 {{ form.images }}
             </div>
 
             <p id="selected-files" ></p>
             {{ attachments.as_p }}
-            <button type="submit" class="btn">Опубликовать</button>
+            <button type="submit" class="btn">{%trans 'Опубликовать'%}</button>
         </form>
     </div>
     <script src="../static/script.js"></script>

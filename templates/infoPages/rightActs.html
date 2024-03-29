@@ -1,25 +1,25 @@
 {% extends 'base.html' %}
-
+{% load  i18n %}
 {% block content %}
 <div class="content-split">
     <div class="navigation">
-        <a href="{% url 'viewSovet'%}" >Наблюдательный совет</a>
-        <a href="{% url 'histories'%}" >История</a>
-        <a href="{% url 'ceo-info' %}" >Руководитель</a>
-        <a href="{% url 'vacancies'%}" >Вакансии</a>
-        <a href="{% url 'orgStruct'%}" >Организационная структура</a>
-        <a href="{% url 'reviews'%}" >Отзывы</a>
-        <a href="{% url 'contacts'%}" >Контакты</a>
-        <a href="{% url 'rights-acts'%}" class = "selected">Правовые акты</a>
-        <a href="{% url 'workers-info'%}" >Сведения о работниках</a>
-        <a href="{% url 'antiCor'%}" >Противодействие коррупции</a>
-        <a href="{% url 'ads' %}" >Протокол итогов</a>
+        <a href="{% url 'viewSovet'%}">{% trans 'Наблюдательный совет' %}</a>
+        <a href="{% url 'histories'%}">{% trans 'История' %}</a>
+        <a href="{% url 'ceo-info' %}">{% trans 'Руководитель' %}</a>
+        <a href="{% url 'vacancies'%}">{% trans 'Вакансии' %}</a>
+        <a href="{% url 'orgStruct'%}">{% trans 'Организационная структура' %}</a>
+        <a href="{% url 'reviews'%}">{% trans 'Отзывы' %}</a>
+        <a href="{% url 'contacts'%}">{% trans 'Контакты' %}</a>
+        <a href="{% url 'rights-acts'%}" class = "selected">{% trans 'Правовые акты' %}</a>
+        <a href="{% url 'workers-info'%}">{% trans 'Сведения о работниках' %}</a>
+        <a href="{% url 'antiCor'%}">{% trans 'Противодействие коррупции' %}</a>
+        <a href="{% url 'ads'%}">{% trans 'Протокол итогов' %}</a>
     </div>
     <div class="rules">
-        <span class="Title">Правовые акты</span>
+        <span class="Title">{% trans 'Правовые акты' %}</span>
         
         <div class="rule-plates new-frame">
-            <h2>Оказание платных услуг регламентируются следующими нормативными правовыми актами:</h2>
+            <h2>{% trans 'Оказание платных услуг регламентируются следующими нормативными правовыми актами' %}:</h2>
             
             <div>
                 {% for right in rights %}

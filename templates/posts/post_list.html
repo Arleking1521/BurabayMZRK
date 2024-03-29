@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block content %}
     <div class="news-plates">
         <div class="new-review">
-            <h1>Новости</h1>
+            <h1>{% trans 'Новости' %}</h1>
                 {% if  user.is_authenticated and user.is_staff %}
-                <a href = "{% url 'new_new' %}" class="btn"> Добавить объявление</a>
+                    <a href = "{% url 'new_new' %}" class="btn"> {% trans 'Добавить объявление' %}</a>
                 {% endif %}
         </div>
         {% for post in post_list %}
@@ -13,13 +13,13 @@
             <div class="frame-header-block">
                 <span class="frame-header mg-t">{{post.title}}</span>
                 
-                <p style="font-weight: 300; font-size: 15px;"><i>Опубликовано: </i><b>{{post.author.name}}</b></p>
+                <p style="font-weight: 300; font-size: 15px;"><i>{%trans 'Опубликовано'%}: </i><b>{{post.author.name}}</b></p>
             </div>
             <hr>
             <span class="frame-content">{{post.content}} </span>
             <div class="frame-btn">
                 <p class="date">{{post.date}}</p>
-                <a href="{% url 'new_detail' pid=post.pk %}" class="btn">Читать далее...</a>
+                <a href="{% url 'new_detail' pid=post.pk %}" class="btn">{%trans 'Читать далее'%}...</a>
             </div>
             
         </div>

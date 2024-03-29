@@ -6,11 +6,17 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from news.views import post_new
+from django.conf.urls.i18n import i18n_patterns
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('static_pages.urls')),
+    path('i18n/', include('django.conf.urls.i18n')),
+    
+    
+]
+urlpatterns += i18n_patterns(
     path('news/', include('news.urls')),
     path('new-news/', post_new, name = 'new_new'),
     path('med-services/', include('medServices.urls')),
@@ -35,6 +41,7 @@ urlpatterns = [
     path('reset/<uidb64>/<token>/', CustomPasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
 
-    path('activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/', activate, name='activate'), 
-]
+    path('activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/', activate, name='activate'),
+)
+
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

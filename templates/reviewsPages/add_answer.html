@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
-
+{% load i18n%}
 {% block content %}
 
 <div class="form-card">
-    <h1>Ответ на отзыв</h1>
-    <p class="review-text"><b>Отзыв от {{ review.author }}:</b> <br>{{ review.review }}</p>
+    <h1>{%trans 'Ответ на отзыв'%}</h1>
+    <p class="review-text"><b>{%trans 'Отзыв от'%} {{ review.author }}:</b> <br>{{ review.review }}</p>
 
     <form method="post" class="login-card">
         {% csrf_token %}
-        <label for="id_answer">Ответ отзыв:</label>
+        <label for="id_answer">{%trans 'Ответ отзыв'%}:</label>
         {{ form.answer }}
-        <button type="submit" class="btn">Отправить ответ</button>
+        <button type="submit" class="btn">{%trans 'Отправить ответ'%}</button>
     </form>
 </div>
 {% endblock %}

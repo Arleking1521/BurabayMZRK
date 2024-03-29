@@ -119,6 +119,8 @@ li{
     border: none;
 }
 
+
+
 .mg-l{
     margin-left: 20px;
 }
@@ -1092,6 +1094,16 @@ width: 30%;
   .lang a{
     text-decoration: none;
     color: var(--bl);
+  }
+
+  .lang{
+    width: 50px;
+    border: 1px solid black;
+    height: 50px;
+    border-radius: 25px;
+    font-weight: 600;
+    background: none;
+    margin-right: 10px;
   }
 
   .new-review{
