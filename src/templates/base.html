@@ -58,7 +58,7 @@
                 {% get_available_languages as LANGUAGES %}
                 {% get_language_info_list for LANGUAGES as languages %}
                 {% for language in languages %}
-                    <button class="lang" type="submit" name="language" value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}disabled style="border:none;"{% endif %}>
+                    <button class="lang" type="submit" name="language" value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}disabled style="cursor: auto;"{% endif %} >
                         {% if language.code == 'ru' %}
                         RU
                         {% elif language.code == 'kk' %}
@@ -80,7 +80,24 @@
     <div class="content">
         
             {% block content %}
-            {% endblock %}   
+            {% endblock %}
+            <form action="{% url 'set_language' %}" method="POST" class="lang-mobile">
+                {% csrf_token %}
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <button class="lang" type="submit" name="language" value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}disabled style="cursor: auto;"{% endif %} >
+                        {% if language.code == 'ru' %}
+                        RU
+                        {% elif language.code == 'kk' %}
+                        KZ
+                        {% endif %}
+                    </button>
+                {% endfor %}
+            </form>
+            
+            </div>
     </div>
     <footer>
         <div class="footer_info">
