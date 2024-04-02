@@ -6,6 +6,11 @@ from .forms import PostForm
 def post_list(request):
     posts = Post.objects.all()
     for post in posts:
+        original_content = post.content
+        post.content = ' '.join(original_content.split()[:40])
+        # Если содержимое было сокращено, добавляем многоточие в конец строки
+        if original_content != post.content:
+            post.content += ' ...'
         att = PostAttachment.objects.filter(post_id = post.pk)
         post.att = att
     return render(request, 'posts/post_list.html', {'post_list':posts})
